@@ -1,6 +1,6 @@
 const blogPosts = [
     {
-        title: "The Ethics of Digital Accessibility",
+        title: "A Critique of Love On the Spectrum",
         date: "February 12, 2026",
         excerpt: "A reflection on how smart-city technologies often overlook the navigational needs of the unhoused...",
         link: "blog/post1.html"
@@ -11,5 +11,9 @@ const blogPosts = [
         excerpt: "Exploring how AI-driven assistive tools change the interpersonal dynamics of caregiving.",
         link: "blog/post2.html"
     }
-    // To add a new post, just copy the block above and paste it here!
-];
+{
+    title: "Spectacle and the Chameleon Nature of Ableism",
+    date: "February 12, 2026",
+    excerpt: "An Autistic queer woman’s critique of Love on the Spectrum, tokenization, and the gaze of the neurotypical observer.",
+    link: "blog/love-on-the-spectrum.html"
+}];
