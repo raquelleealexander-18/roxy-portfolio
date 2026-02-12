@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy Alexander | Disability Scholar & Activist</title>
+    
+    <style>
+        /* 1. CSS RESET: Ensures consistent looks across all browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. VISUAL IDENTITY: Option B (Humanities & Archive) */
+        :root {
+            --accent: #7b241c; /* Deep Oxblood */
+            --bg: #f9f7f2;    /* Soft Paper Cream */
+            --text: #2c2c2c;   /* Soft Black */
+            --link-hover: #a93226;
+            --max-width: 800px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Baskerville', 'Georgia', serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+        }
+
+        /* 3. ACCESSIBILITY: Focus States & Skip Links */
+        /* This ensures keyboard users can see where they are navigating */
+        a:focus {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+        /* 4. LAYOUT & TYPOGRAPHY */
+        header, main, footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 80px 0 40px 0;
+            border-bottom: 1px solid rgba(123, 36, 28, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+
+        .entry {
+            margin-bottom: 40px;
+        }
+
+        .entry h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            font-family: Arial, sans-serif;
+            font-size: 0.7rem;
+            background: rgba(123, 36, 28, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        /* 5. CONTACT & FOOTER */
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid #e0ddd5;
+            box-shadow: 4px 4px 0px rgba(123, 36, 28, 0.1);
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <h1>Roxy Alexander</h1>
+        <div class="subtitle">Disability Scholar & Activist</div>
+        <p>University of Oregon, BA | American University, MA</p>
+        <nav aria-label="Main Navigation">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        
+        <section id="about">
+            <h2>About</h2>
+            <p>I am a Graduate student in the Department of Philosophy and Religion at American University. My work explores the vital intersections of <strong>Disability, Gender, Race, and Technology</strong>, focusing on how systemic structures can be reimagined through both ethical inquiry and direct action.</p>
+            <p>My activism is deeply rooted in mutual aid and community-building, specifically aimed at improving the lives of disabled individuals and the unhoused community.</p>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <div class="entry">
+                <h3>Technological Accessibility & Race</h3>
+                <p>Investigating the digital divide and the racialized nature of assistive technologies in the 21st century.</p>
+            </div>
+            <div class="entry">
+                <h3>Ethics of Care</h3>
+                <p>Analyzing feminist philosophical frameworks to redefine autonomy within disabled communities.</p>
+            </div>
+        </section>
+
+        <section id="service">
+            <h2>Service & Advocacy</h2>
+            <div class="entry">
+                <h3>Academic Leadership <span class="tag">Institutional</span></h3>
+                <p>Facilitated a student-led initiative within the PHIL/RELG department at American University to improve transparency and support for the <strong>Qualifying Paper (QP)</strong> and <strong>Capstone</strong> processes.</p>
+            </div>
+            <div class="entry">
+                <h3>Unhoused Community Mutual Aid <span class="tag">Activism</span></h3>
+                <p>Organizing fundraising and direct-resource distribution with a focus on accessibility for unhoused persons with disabilities.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-card">
+                <h2>Connect</h2>
+                <p>I am open to collaborations on research, pedagogy, and grassroots organizing.</p>
+                <p style="margin-top: 20px;">
+                    <strong>Email:</strong> <a href="mailto:your-email@american.edu" style="color: var(--accent);">your-email@american.edu</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. Hand-coded with a focus on universal accessibility.</p>
+    </footer>
+
+</body>
+</html>
