@@ -66,6 +66,8 @@
                     font-size: 1.08rem;
                     display: flex;
                     align-items: center;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
                 }
                 #resources li strong {
                     margin-right: 8px;
@@ -109,8 +111,11 @@
                     position: absolute;
                     left: -32px;
                     top: 6px;
-                    color: var(--pink-pastel);
-                    font-size: 1.2em;
+                    width: 16px;
+                    height: 16px;
+                    background: var(--pink-pastel);
+                    border-radius: 50%;
+                    box-shadow: 0 0 4px rgba(186, 51, 128, 0.32);
                 }
                 #timeline li strong {
                     color: var(--pink-pastel);
@@ -467,6 +472,9 @@
         <div class="header-content">
             <h1>Roxy Alexander</h1>
             <p class="subtitle">Disability Scholar & Activist</p>
+            <blockquote style="margin: 24px 0 0 0; padding: 18px 24px; background: #f7d8c5; border-left: 5px solid var(--pink-pastel); border-radius: 8px; font-size: 1.08rem; color: #6B5344;">
+                <strong>Pharmableism</strong> <span style="font-style:italic; color:#8A5A7B;">(a term I coined)</span>: While ableism takes many forms, the specific form of ableism affecting medical drugs is <strong>pharmableism</strong>: the belief that pharmaceuticals can, and therefore should, be used to cure ailments such as a disease, disorder, syndrome, or disability. This belief operates on a preceding belief that there exists an ideal bodymind to which we should strive for and that bodyminds that skew from the social imaginaries’ ideal are bad.
+            </blockquote>
         </div>
         <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 160px, 220px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="220" height="220">
         
@@ -565,11 +573,14 @@
         </section>
             <h2>Resources & Recommendations</h2>
             <ul>
-                <li><strong>Books:</strong> <em>Disability Visibility</em> &nbsp;by Alice Wong, <em>&nbsp;Care Work</em> &nbsp;by Leah Lakshmi Piepzna-Samarasinha</li>
+                <li><strong>Books:</strong> 
+                    <em>Against Technoableism</em>&nbsp;by Ashley Shew, 
+                    <em>Disability Visibility</em>&nbsp;by Alice Wong, 
+                    <em>Care Work</em>&nbsp;by Leah Lakshmi Piepzna-Samarasinha, 
+                    <em>Pleasure Activism</em>&nbsp;by adrienne marie brown</li>
                 <li><strong>Podcasts:</strong> <em>Disability After Dark </em>,&nbsp; <em>Philosophy Bites</em></li>
             </ul>
         </section>
-
         <section id="contact">
             <h2>Connect</h2>
             <p>Academic Email: <a href="mailto:ra0962a@american.edu" style="color:var(--pink-pastel)">ra0962a@american.edu</a></p>
