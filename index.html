@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy Alexander | Disability Scholar & Activist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. CSS RESET */
+                /* Guestbook Styles */
+                #guestbook {
+                    background: #F9EAF3;
+                    border-radius: 12px;
+                    padding: 32px;
+                    margin-bottom: 40px;
+                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
+                }
+                #guestbook-form input, #guestbook-form textarea {
+                    border: 1px solid var(--pink-pastel);
+                    border-radius: 6px;
+                    font-family: 'Lora', serif;
+                    font-size: 1rem;
+                    padding: 8px;
+                    margin-bottom: 8px;
+                }
+                #guestbook-form button {
+                    border-radius: 6px;
+                    font-family: 'Lora', serif;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+                #guestbook-messages div {
+                    background: #fff;
+                    border-left: 4px solid var(--pink-pastel);
+                    border-radius: 6px;
+                    margin-bottom: 12px;
+                    padding: 12px 16px;
+                    font-size: 1.05rem;
+                    position: relative;
+                }
+                #guestbook-messages div::before {
+                    content: "";
+                    position: absolute;
+                    left: -32px;
+                    top: 12px;
+                    font-size: 1.2rem;
+                }
+
+                /* Resources & Recommendations Styles */
+                #resources {
+                    background: #F6F9F6;
+                    border-radius: 12px;
+                    padding: 32px;
+                    margin-bottom: 40px;
+                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
+                }
+                #resources ul {
+                    margin-top: 16px;
+                }
+                #resources li {
+                    margin-bottom: 14px;
+                    font-size: 1.08rem;
+                    display: flex;
+                    align-items: center;
+                }
+                #resources li strong {
+                    margin-right: 8px;
+                }
+                #resources li::before {
+                    content: "";
+                    margin-right: 0;
+                    font-size: 1.1rem;
+                }
+                #resources li:nth-child(2)::before {
+                    content: "";
+                }
+                #resources li:nth-child(3)::before {
+                    content: "";
+                }
+                #resources a:hover {
+                    color: #D9A5C0;
+                    text-decoration: underline;
+                }
+
+                /* Timeline Styles */
+                #timeline {
+                    background: #f7d8c5;
+                    border-radius: 12px;
+                    padding: 32px;
+                    margin-bottom: 40px;
+                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
+                }
+                #timeline ul {
+                    border-left: 3px solid var(--pink-pastel);
+                    padding-left: 24px;
+                    margin-top: 16px;
+                }
+                #timeline li {
+                    position: relative;
+                    margin-bottom: 40px;
+                    font-size: 1.08rem;
+                }
+                #timeline li::before {
+                    content: "";
+                    position: absolute;
+                    left: -32px;
+                    top: 6px;
+                    color: var(--pink-pastel);
+                    font-size: 1.2em;
+                }
+                #timeline li strong {
+                    color: var(--pink-pastel);
+                    font-size: 1.1rem;
+                }
+                #timeline li:hover {
+                    background: rgba(217,165,192,0.07);
+                    border-radius: 6px;
+                    transition: background 0.2s;
+                }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* 2. Warm, friendly visual identity */
+        :root {
+            --bg: #FEFDFB;
+            --text: #6B5344;
+            --pink-pastel: #D9A5C0;
+            --card-bg: #FFFFFF;
+            --max-width: 900px;
+            --border-width: 1px;
+            --radius: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        /* 3. ACCESSIBILITY */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        /* Respect user's motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: more) {
+            body {
+                font-weight: 500;
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        /* 4. LAYOUT & HEADER */
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--pink-pastel);
+            border-radius: 0;
+            box-shadow: none;
+            text-align: left;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header-content {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        /* Profile image */
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid var(--pink-pastel);
+            display: block;
+            flex-shrink: 0;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--pink-pastel);
+        }
+
+        nav a.active {
+            color: var(--pink-pastel);
+        }
+
+        nav a:focus { outline: 3px solid var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background: white;
+            border: none;
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            border-radius: 0;
+            box-shadow: none;
+            transition: all 0.4s ease-out;
+        }
+
+        section.fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+            border-bottom-color: var(--pink-pastel);
+            border-bottom-width: 2px;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            display: inline-block;
+            padding: 0;
+            margin-bottom: 18px;
+            border-radius: 0;
+            font-size: 1.5rem;
+        }
+
+        .entry h3, article h3 { font-family: 'Lora', serif; margin-bottom: 10px; color: var(--text); font-weight: 600; }
+
+        .post-date { font-size: 0.9rem; font-weight: 400; color: var(--text); margin-bottom: 6px; font-style: italic; }
+        .post-title a { color: var(--text); text-decoration: none; font-weight: 600; }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        section a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        section a:hover::before {
+            width: 100%;
+        }
+
+        section a:hover {
+            opacity: 1;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 12px;
+            border-left: 3px solid transparent;
+            user-select: none;
+        }
+
+        .entry[role="button"] {
+            outline: none;
+        }
+
+        .entry[role="button"]:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 2px;
+        }
+
+        .entry:hover {
+            border-left-color: var(--pink-pastel);
+            background-color: rgba(217, 165, 192, 0.05);
+            padding-left: 18px;
+        }
+
+        .entry-description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .entry.expanded .entry-description {
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        .entry .toggle-icon {
+            display: inline-block;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .entry.expanded .toggle-icon {
+            transform: rotate(90deg);
+        }
+
+        /* Service list styling */
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 8px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .service-list li {
+            padding: 12px 14px;
+            background: transparent;
+            border-left: 4px solid rgba(107,83,68,0.06);
+            transition: background 0.18s ease, border-left-color 0.18s ease;
+        }
+
+        .service-list li:hover,
+        .service-list li:focus {
+            background-color: rgba(217,165,192,0.04);
+            border-left-color: var(--pink-pastel);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+       <nav role="navigation" aria-label="Site navigation">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#cv">CV</a>
+            <a href="#blogs">Writing</a>
+            <a href="#community-engagement">Community Engagement and Leadership</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-content">
+            <h1>Roxy Alexander</h1>
+            <p class="subtitle">Disability Scholar & Activist</p>
+        </div>
+        <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 160px, 220px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="220" height="220">
+        
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="about">
+            <h2>About</h2>
+            <p>I am a Graduate student at American University specializing in the ethical and social implications of <strong>Disability, Gender, Race, and Technology</strong>.</p>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <p>My research focuses on the intersection of disability studies, gender, race, and technology. I examine how these fields intersect to shape experiences of inclusion and exclusion in health care, education, and in digital spaces for disabled communities.</p>
+        </section>
+
+        <section id="cv">
+            <h2>CV & Conferences</h2>
+            <p><a href="Raquel (Roxy) Alexander CV 2025.docx" style="color:var(--pink-pastel)">Download CV</a></p>
+            
+            <h3 style="margin-top: 28px; margin-bottom: 16px;">Conference Presentations</h3>
+            <div class="entry">
+                <p style="margin-bottom: 4px;"><strong>philoSOPHIA 2026 Villanova</strong> — April 2026</p>
+                <p style="font-style: italic; margin-bottom: 14px;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
+            </div>
+            <div class="entry">
+                <p style="margin-bottom: 4px;"><strong>Uehiro 2026 Graduate Student Conference</strong> — March 2026</p>
+                <p style="font-style: italic; margin-bottom: 14px;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
+            </div>
+            <div class="entry">
+                <p style="margin-bottom: 4px;"><strong>FEAST 2025</strong> — October 2025</p>
+                <p style="font-style: italic; margin-bottom: 14px;">"Unmasking Pharmableism"</p>
+            </div>
+            <div class="entry">
+                <p style="margin-bottom: 4px;"><strong>Transgressing Tradition</strong>, University of Oregon — May 2024</p>
+                <p style="font-style: italic; margin-bottom: 14px;">"Epistemic Injustice and ADHD"</p>
+            </div>
+            <div class="entry">
+                <p style="margin-bottom: 4px;"><strong>Praxis as First Philosophy</strong>, UNC Charlotte — April 2024</p>
+                <p style="font-style: italic;">"Epistemic Injustice and ADHD Girls in the K-12 Education System"</p>
+            </div>
+        </section>
+
+        <section id="community-engagement">
+            <h2>Community Engagement and Leadership</h2>
+            <p class="subtitle" style="margin-bottom:18px;">Committed to ongoing community engagement and advocacy for disability rights and inclusion.</p>
+            <ul class="service-list" aria-label="Service and community work">
+                <li>
+                    <strong>Graduate Student Representative</strong> for American University Philosophy and Religion department — Advocated for graduate student interests and contributed to departmental leadership and community building.
+                </li>
+                <li>
+                    <strong>Raquella.Crochets</strong> — small business with a social mission to support and uplift marginalized communities. Currently <a href="https://gofund.me/b408644ad">raising money for the unhoused community in DC</a> (raised $1000).
+                </li>
+                <li>
+                    <strong>AU Humanities Truck Fellow</strong> — bringing philosophical conversations into community spaces beyond the Ivory Tower.
+                </li>
+                <li>
+                    <strong>Co-host</strong> of the <em>Philosophy Across Generations</em> podcast; partnered with DC's Global Kids and the American Red Cross for community programming.
+                </li>
+                <li>
+                    <strong>Special Educational Assistant, Middle School</strong> — Worked closely with students to develop social-emotional learning skills, assisted in 504/IEP interventions, coached track, and managed costumes for the school play. Supported diverse learners and fostered an inclusive, creative environment.
+                </li>
+            </ul>
+        </section>
+
+        <section id="blogs">
+            <h2>Writing</h2>
+            <div id="blog-posts"></div>
+        </section>
+
+        <section id="resources">
+        <section id="timeline">
+            <h2>Academic & Leadership Timeline</h2>
+            <ul>
+                <li><strong>2026:</strong> Grad Student Rep, AU Philosophy & Religion</li>
+                <li><strong>2025:</strong> FEAST Conf. "Unmasking Pharmableism"; Humanities Truck Fellow; Podcast Co-host</li>
+                <li><strong>2024:</strong> Started MA, AU Philosophy (Social Policy & Ethics)</li>
+                <li><strong>2023:</strong> BA, UO Philosophy (Honors, PBK, Cum Laude); Thesis: "Epistemic Injustice & ADHD Girls"</li>
+                <li><strong>2019:</strong> Graduated Fairview HS, Boulder CO; NHS Historian, Student Council, Swim/Dive Captain</li>
+            </ul>
+        </section>
+
+        <section id="guestbook">
+            <h2>Guestbook</h2>
+            <p style="margin-bottom:18px; font-size:1.08rem; color:var(--text);">I'd love to hear from you! Leave a message, share your thoughts, or just say hello. Your comments and encouragement help build a welcoming community.</p>
+            <form id="guestbook-form" style="margin-bottom:24px;">
+                <label for="guest-name">Name:</label><br>
+                <input type="text" id="guest-name" name="guest-name" required style="margin-bottom:8px; width:100%;"><br>
+                <label for="guest-message">Message:</label><br>
+                <textarea id="guest-message" name="guest-message" rows="4" required style="margin-bottom:8px; width:100%;"></textarea><br>
+                <button type="submit" style="background:var(--pink-pastel); color:white; border:none; padding:8px 16px;">Submit</button>
+            </form>
+            <div id="guestbook-messages">
+                <!-- Messages will appear here -->
+            </div>
+        </section>
+            <h2>Resources & Recommendations</h2>
+            <ul>
+                <li><strong>Books:</strong> <em>Disability Visibility</em> &nbsp;by Alice Wong, <em>&nbsp;Care Work</em> &nbsp;by Leah Lakshmi Piepzna-Samarasinha</li>
+                <li><strong>Podcasts:</strong> <em>Disability After Dark </em>,&nbsp; <em>Philosophy Bites</em></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Connect</h2>
+            <p>Academic Email: <a href="mailto:ra0962a@american.edu" style="color:var(--pink-pastel)">ra0962a@american.edu</a></p>
+            <p>Personal Email: <a href="mailto:raquelleealexander@gmail.com" style="color:var(--pink-pastel)">raquelleealexander@gmail.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/raquella.crochets" style="color:var(--pink-pastel)">@raquella.crochets</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/raquel-alexander-7b0b97278/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOGTy1q5WTXqpoOZ%2Bu0%2BZcA%3D%3D" style="color:var(--pink-pastel)">Raquel Alexander</a></p>
+        </section>
+    </main>
+
+    <footer role="contentinfo">&copy; 2026 Roxy Alexander. All rights reserved.</footer>
+
+    <script src="posts.js"></script>
+            <script>
+            // Simple guestbook functionality (local only)
+            document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('guest-name').value;
+                const message = document.getElementById('guest-message').value;
+                const msgDiv = document.createElement('div');
+                msgDiv.style.marginBottom = '16px';
+                msgDiv.innerHTML = `<strong>${name}</strong>: <span>${message}</span>`;
+                document.getElementById('guestbook-messages').prepend(msgDiv);
+                this.reset();
+            });
+            </script>
+    <script>
+        // ===== SCROLL ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Animate all sections on page load
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+
+        // ===== ACTIVE NAVIGATION HIGHLIGHTING =====
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        });
+
+        // ===== RENDER BLOG POSTS =====
+        const postContainer = document.getElementById('blog-posts');
+        blogPosts.forEach(post => {
+            const article = document.createElement('article');
+            article.style.marginBottom = "40px";
+            article.style.transition = "all 0.3s ease";
+            article.setAttribute('role', 'article');
+            article.innerHTML = `
+                <div class="post-date">${post.date}</div>
+                <h3 class="post-title">
+                    <a href="${post.link}">${post.title}</a>
+                </h3>
+                <p>${post.excerpt}</p>
+            `;
+            
+            // Add hover animation to blog posts
+            article.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(8px)';
+            });
+            article.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+            
+            postContainer.appendChild(article);
+        });
+
+        // ===== EXPANDABLE CV ENTRIES WITH KEYBOARD SUPPORT =====
+        document.querySelectorAll('.entry').forEach(entry => {
+            entry.setAttribute('role', 'button');
+            entry.setAttribute('tabindex', '0');
+            entry.setAttribute('aria-expanded', 'false');
+            
+            const toggleHandler = function() {
+                const isExpanded = this.classList.toggle('expanded');
+                this.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+            };
+            
+            entry.addEventListener('click', toggleHandler);
+            
+            // Add keyboard support (Enter and Space)
+            entry.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleHandler.call(this);
+                }
+            });
+        });
+
+        // ===== SMOOTH PAGE REVEAL ON LOAD =====
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.animation = 'fadeIn 0.5s ease-out';
+        });
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+</html>
