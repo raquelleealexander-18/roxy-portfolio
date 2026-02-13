@@ -1,0 +1,28 @@
+<!-- Guestbook/Comment Feature -->
+<section id="guestbook">
+  <h2>Guestbook</h2>
+  <form id="guestbook-form" style="margin-bottom:24px;">
+    <label for="guest-name">Name:</label><br>
+    <input type="text" id="guest-name" name="guest-name" required style="margin-bottom:8px; width:100%;"><br>
+    <label for="guest-message">Message:</label><br>
+    <textarea id="guest-message" name="guest-message" rows="4" required style="margin-bottom:8px; width:100%;"></textarea><br>
+    <button type="submit" style="background:var(--pink-pastel); color:white; border:none; padding:8px 16px;">Submit</button>
+  </form>
+  <div id="guestbook-messages">
+    <!-- Messages will appear here -->
+  </div>
+</section>
+
+<script>
+// Simple guestbook functionality (local only)
+document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('guest-name').value;
+  const message = document.getElementById('guest-message').value;
+  const msgDiv = document.createElement('div');
+  msgDiv.style.marginBottom = '16px';
+  msgDiv.innerHTML = `<strong>${name}</strong>: <span>${message}</span>`;
+  document.getElementById('guestbook-messages').prepend(msgDiv);
+  this.reset();
+});
+</script>
