@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pharmaceuticals — Technology, Machines, and Humans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A critical framework positioning pharmaceuticals as technological objects and machines that shape and are shaped by social and political realities, introducing 'pharmableism' and its implications." />
+  <meta property="og:title" content="Pharmaceuticals — Technology, Machines, and Humans" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="A critical framework positioning pharmaceuticals as technological objects and machines that shape and are shaped by social and political realities, introducing 'pharmableism'." />
+  <meta property="og:locale" content="en_US" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FEFDFB;
+      --brown-deep: #6B5344;
+      --pink-pastel: #D9A5C0;
+      --purple-royal: #8B6E8F;
+      --cream: #FFFAF7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', serif;
+      line-height: 1.8;
+      color: var(--brown-deep);
+      background-color: var(--bg);
+      padding: 40px 20px;
+    }
+
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    header.article-header {
+      background: white;
+      border-bottom: 2px solid var(--pink-pastel);
+      padding: 40px 0;
+      margin-bottom: 40px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      font-weight: 600;
+      color: var(--brown-deep);
+      line-height: 1.3;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .dek {
+      color: var(--brown-deep);
+      margin: 12px 0 16px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .meta {
+      color: #777;
+      font-size: 0.95rem;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-style: italic;
+    }
+
+    main.wrap {
+      background: white;
+      border: none;
+      padding: 40px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    nav.toc {
+      border: 2px solid var(--pink-pastel);
+      border-radius: 8px;
+      padding: 24px;
+      background: rgba(217, 165, 192, 0.04);
+      margin: 32px 0;
+    }
+
+    nav.toc h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      margin: 0 0 12px 0;
+    }
+
+    nav.toc ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    nav.toc li {
+      margin-bottom: 8px;
+    }
+
+    nav.toc a {
+      color: var(--brown-deep);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    nav.toc a:hover {
+      color: var(--pink-pastel);
+      text-decoration: underline;
+    }
+
+    article {
+      padding: 12px 0;
+    }
+
+    article section {
+      margin-bottom: 40px;
+    }
+
+    article h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      margin-top: 48px;
+      margin-bottom: 20px;
+      padding-top: 0;
+      border-top: none;
+      padding-left: 0;
+    }
+
+    article h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+
+    article p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.85;
+    }
+
+    article ul {
+      margin: 20px 0 20px 40px;
+    }
+
+    article li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--pink-pastel);
+      background: rgba(217, 165, 192, 0.06);
+      margin: 32px 0;
+      padding: 16px 0 16px 24px;
+      font-style: italic;
+      color: var(--brown-deep);
+      border-radius: 0;
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
+
+    em {
+      color: var(--brown-deep);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .bibliography {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 3px solid var(--blue-vibrant);
+    }
+
+    .bibliography h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .biblio-list {
+      list-style: decimal;
+      padding-left: 20px;
+      margin: 20px 0;
+    }
+
+    .biblio-list li {
+      margin-bottom: 16px;
+      line-height: 1.7;
+      color: var(--brown-deep);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-size: 0.85rem;
+      color: var(--brown-deep);
+      border-top: 1px solid var(--pink-pastel);
+      font-weight: 400;
+    }
+
+    @media (max-width: 640px) {
+      header.article-header,
+      main.wrap {
+        border-width: 0;
+        padding: 24px;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      article h2 {
+        font-size: 1.4rem;
+      }
+
+      nav.toc {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="article-header wrap" id="top">
+    <h1>Pharmaceuticals — Technology, Machines, and Humans</h1>
+    <p class="dek">Advancing a critical framework that treats pharmaceuticals as technological objects and machines, introducing <em>pharmableism</em> and reorienting what we choose to “fix.”</p>
+    <div class="meta">
+      <span>December 2025</span>
+      <span>Key terms: Pharmaceutical Intervention, GLP‑1, Pharmableism, Philosophy of Technology</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#tech">Pharmaceuticals as Technology</a></li>
+        <li><a href="#machines">Pharmaceuticals as Machines</a></li>
+        <li><a href="#pharmableism">Pharmableism</a></li>
+        <li><a href="#remedy">Pharmaceutical Intervention as Remedy</a></li>
+        <li><a href="#poison">Pharmaceutical Intervention as Poison</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#bibliography">Bibliography</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="abstract">
+        <h2>Abstract</h2>
+        <p>My paper advances a critical framework for understanding pharmaceuticals as more than chemical substances, positioning them as technological objects and machines that are being shaped by and shape social and political realities. Drawing on Carl Mitcham's definition of technology and Maurizio Lazzarato's theory of machines, the analysis demonstrates how medical drugs operate at both individual and social levels, producing subjectivity and reinforcing systems of control. My work presents the novel term <em>pharmableism</em> as the belief that pharmaceuticals can and should be used to achieve an ideal bodymind. Further, I familiarize the reader with a critique of the ideological conditions under which pharmableism thrives, including ableism, racialization, and corporate profit motives. Through examples such as GLP-1 weight-loss drugs, I interrogate how biopharmaceutical advertisements and medical interventions mediate access, exclusion, and participation in social spaces, erecting physical and social borders. While acknowledging the remedying potential of pharmaceuticals, my paper argues that their industrialization under Western settler-colonial capitalism perpetuates poisonous, oppressive norms. Ultimately, my work calls for a shift in what we "fix;" from curing individuals to transforming environments and social systems, reframing healthcare policy and pharmaceutical advertising through a pharmableist critique.</p>
+      </section>
+
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <blockquote>"Weight loss isn't just about willpower. Hormonal changes, genetics, and even stress can throw off the hormones that regulate your hunger and fullness. After having kids, Serena struggled to lose weight—despite doing everything 'right.' That's when she turned to GLP-1s."</blockquote>
+        <p>RO, an app designed to provide efficient healthcare, partnered with Serena Williams to promote GLP-1s. More popularly known under brand names like Wegovy and Ozempic, GLP-1's are self-administered weight loss injections designed to lower glucose, and reduce bodyweight, cardiovascular risk, and renal complications. Serena Williams is a fit woman promoting a drug initially designed for obese pre-diabetic individuals to lower their A1C's. The visual impact that seeing a woman of her small size taking a weight loss drug is not neutral. It is deeply political and ideological.</p>
+        <p>If a viewer of RO's ad starts a GLP-1, how can we determine if their choice is driven by a genuine desire to lose weight for health reasons or by the desire to lose weight because it is socially beneficial to be thin? Currently, in the healthcare industry, pharmaceutical critiques tend to be biological, examining the short- and long-term physiological effects of a medication on individuals. This biological critique is too narrow to address the question above because it does not consider pharmaceuticals as technological objects that have a social or political valence. This paper develops a critique that addresses the underlying political and social ideologies affecting medical drugs.</p>
+        <p>Within this work the term <em>pharmableism</em> will be offered. Pharmableism is the belief that pharmaceuticals can and should be used to achieve an ideal bodymind. Advancing a pharmableist critique, this paper attends to the structures of power, like ableism, racism, and neoliberalism that shape medicalization, access, and exclusion. Further, this paper calls for a shift in focus from curing individuals to transforming environments and social systems.</p>
+        <p>The first section of this paper will present Carl Mitcham's definition of technological objects and argue that pharmaceuticals conform to such definitions. The second section will work with Maurizio Lazzarato's conceptualization of machines to prove the pharmaceutical machine. The final section will define the novel term pharmableism and prove how a critical framework of pharmableism can answer the question: Is the choice to medicate personal or social?</p>
+      </section>
+
+      <section id="tech">
+        <h2>Pharmaceuticals as Technology</h2>
+        <p>In this section, I will provide a formal definition of pharmaceutical and argue in favor of the consideration of medical drugs as technological objects.</p>
+        <p>For the purposes of this paper, pharmaceutical is interchangeable with drug or medicine and should be understood as a human-made entity, approved by the biopharmaceutical industry, intended to affect the structure or function of the body in order to bring about a change in the functionality of the specific bodily target. Typically, pharmaceutical entities are small-molecule drugs, nucleic acid-based drugs, or proteins (including hormone-like molecules, protein decoys, and antibodies). Administration of this entity is often oral, but can also occur through inhalation, injection, or topical application.</p>
+        <p>From a wider philosophical perspective, medicine has not been theorized as a technology. However, by overlooking pharmaceuticals as a technological object, philosophers fail to consider the drug's form and the particularities of its use, along with the consequences that attend the social, economic, legal, and political integration of pharmaceuticals into our society. Therefore, it is at least prudent to consider whether medicinal drugs are technological objects.</p>
+        <p>In his work <em>Thinking through Technology</em>, Carl Mitcham provides the following definition for a technological object: "all humanly fabricated material artifacts whose function depends on a specific materiality as such." If we compare our definition for pharmaceutical with that for technology, we can see that a medical drug conforms to the definition cited above. Pharmaceuticals are humanly fabricated material substances, and their function depends on the material nature of that object. Take for instance insulin, a naturally occurring hormone. For individuals with Type 1 Diabetes, insulin is not naturally produced and must be administered in its liquid state, through injection. Therefore, pharmaceutical insulin is humanly fabricated, and its function depends on the material nature of the object (liquid form). Under Mitcham's definition, medical drugs are technological objects.</p>
+        <p>Orienting our analysis of pharmaceuticals through a philosophy of technology allows for the consideration of pharmaceuticals as socially and politically affected objects. With this new orientation, we can inject more of the social into our philosophical critique of medicine and apply the concise conceptual framework of Andrew Feenberg, laid out in his book <em>Questioning Technology</em>. Feenberg provides a schema consisting of eight interrelated elements: 1) decontextualization / de-worlding, 2) reduction, 3) autonomization, 4) positioning, 5) systematization, 6) ornamentation, 7) vocation, and 8) initiative. The first four belong to the category primary instrumentalization and the last four belong to that of secondary instrumentalization. Of these two categories, the latter opens onto the more social aspects of the technological object and will therefore be beneficial to this project's investigation into the systems of power shaping the medicalization, access, and exclusion of communities.</p>
+        <p>Let us quickly turn our attention to the biopharmaceutical industries mediation of pharmaceutical intervention. According to the U.S. Food and Drug Administration (FDA), drugs provide an effective way "to cure, prevent, mitigate, or treat a disease," disorder, or syndrome. Within this mediation exists the sixth and seventh element laid out by Feenberg, ornamentation and vocation. Ornamentation is "where we encounter the ethical meaning of the object." The ornamentation of drugs under the FDA's mediation is one that implies a positive, efficacious value. Consider the language used in the RO advertisement on GLP-1's. Serena has seemingly tried everything to lose the weight of her pregnancy, yet the only effective solution for her weight loss is taking GLP-1's. The advertisement is affecting GLP-1's with the same ornamentation that the FDA's definition of drugs does; medicine is effective and good. Vocation, as articulated by Feenberg, is where we "consider the effects the object has on those who use it." In the FDA's definition of drugs, the volition present is that the effect of the drug is to cure or prevent disease, disorder, or syndromes from occurring. GLP-1's are advertised as a cure for obesity or prevention of diabetes. A further analysis of all eight features of Feenberg's framework ought to be applied to pharmaceuticals, however it is beyond the scope of this paper. Under Feenberg's framework it becomes apparent that pharmaceuticals are not simply physiological in nature.</p>
+        <p>Pharmaceuticals, as technological objects, are socially and politically constructed. When we evaluate pharmaceuticals as technological objects we can apply frameworks, such as Feenberg's, to critique the invisible social and political powers that pharmaceuticals have on humanity. With Feenberg's framework, it becomes clear that pharmaceuticals are socially and politically affected objects, and as a result can influence the socially and physically built world. How then can we isolate the aspects of the built world influenced by pharmaceuticals?</p>
+      </section>
+
+      <section id="machines">
+        <h2>Pharmaceuticals as Machines</h2>
+        <p>As articulated previously, pharmaceuticals' conformity to Mitcham's definition for technological objects instantiates medicine as a form of technology. Can we make a similar claim about drugs as a type of machine?</p>
+        <p><em>The Machine</em> by Maurizio Lazzarato appears in the epilog to Geral Raunig's book "<em>Tausend Maschinen,</em>" and reviews Deleuze and Guattari's theory of machines to re-define contemporary capitalism. In this essay, the machine is not limited to techné, it includes technical, aesthetic, economic, social, communicational, as well as other types of machines, and has two main functions: machinic enslavement and social subjection. The author maps his framework onto the example of a television, highlighting differing aspects of machinic enslavement and social subjection. Lazzarato's definition of machine is useful because it expands the notion of the machine beyond the colloquial understanding of the machine as mechanical, emphasizing its role in shaping subjectivity, desire, and social control in contemporary capitalism.</p>
+        <p>Under Lazzarato's framework, pharmaceuticals function as a machine. First, a machine must be a device of social subjection. Social subjection "operates at the molar level of the individual" (Lazzarato 2008, 1), constructing subjects by assigning identities and standardizing expressions, behaviors, and meanings. Taking the category identity offered by the author as an example of a molar level, it can be said that medical drugs operate at the molar level. Machines produce subjectivity by assigning identity. Pharmaceuticals, through marketing, medical discourse, and healthcare systems, produce "the patient" as a subject. For example, RO's advertising tells the chubby individual they have a condition (e.g., obesity, pre-diabetes, etc.) and offers a pharmaceutical solution. Additionally, machines standardize subjectivity, as do pharmaceuticals. Might we reflect on how GLP-1s standardize the way people experience and express their bodies; they experience themselves through the label of "unhealthy," and their expressions of hunger are regulated and controlled. Overall, pharmaceuticals are devices of social subjection, but to be a machine, they must also have the feature of machinist enslavement. Machinic enslavement is the second main function of the machine. Machinic enslavement operates at the molecular, pre-individual, or infrasocial level, and form what Lazzarato calls open multiplicities at which point no distinction between the human and the non-human can be made. Put differently, there is no way to tell the difference between what came from the human and what was a product of the integrated machine. Medical drugs operate in the individual at the molecular level and chemically integrate into bodily processes, blurring human/non-human boundaries. Machines control pre-individual affects and desires, so too do pharmaceuticals. For instance, hormonal birth controls alter moods, libido, and menstrual cycles, making it hard to distinguish between "natural" and "medicated" states of being. As a result, the medicated becomes a cog in the pharmaceutical machine, their biology and subjectivity are co-produced with the drug. The role in shaping subjectivity, desire, and social control, taken together, suggest that pharmaceuticals are not just social and political constructs under late-stage capitalism, but devices of control and exploitation, altering what it means to be human today.</p>
+      </section>
+
+      <section id="pharmableism">
+        <h2>Pharmableism</h2>
+        <p>It has been argued thus far that pharmaceuticals are social and political objects that shape the built world. This section will introduce the term pharmableism, putting a name to the harmful ideology present in the built world that is the Western settler-colonial United States. I will then provide the four conditions required for pharmableist ideology to thrive. Finally, I will offer a critique of pharmableism.</p>
+        <p>Because pharmaceutical technological objects as machines are devices of control and exploitation that shape what it means to be human in the 21st century, drugs are the perfect vessel for ableist ideologies. While ableism takes many forms, the specific form of ableism affecting medical drugs is pharmableism: the belief that pharmaceuticals can, and therefore should, be used to cure ailments such as a disease, disorder, syndrome, or disability. This belief operates on a preceding belief that there exists an ideal bodymind to which we should strive for and that bodyminds that skew from the social imaginaries' ideal are bad.</p>
+        <p>I developed the term pharmableism to identify an ideology symptomatic of the current late-capitalist, neo-liberal Western settler-colonial culture. Pharmableist ideology thrives under the conditions that are prevalent in a world where privileged individuals have social mobility and ontological freedom if it 1) doesn't hurt those in power and 2) profits big corporations.</p>
+        <p>For actions or beliefs to qualify as pharmableist in origin, certain conditions must be met. First, there must exist within the dominant social imaginary a distinction between abled and disabled, of which abled is positively valued and disabled is negatively valued. From this distinction arises the ideal version of a human, widely held within the social imaginary. Second, the perceived cause of disability follows the medical model: Disability originates from within the individual and is inherently pathological, causing an impairment to the body's function or system. "From this perspective, the goal is to return the system or function to as close to 'normal' as possible" and therefore return the individual's quality of life to as "normal" as possible. Third, stemming from the medical model, medicine is believed to be value-neutral, safe, and effective. As seen in the previous sections, medical intervention is oriented to foster the belief that medicine can help achieve the ideal that has been constructed by the social imaginary (i.e., GLP-1's effectively producing weight-loss). When such beliefs exist, patient compliance is high. Thus, profits are high. Lastly, there will be evidence that the first three conditions have provided a framework for interpreting social, political, and economic issues, and that they are influencing people's attitudes, behaviors, and decisions.</p>
+        <p>Evaluation of the advertisement of GLP-1's exposes all four conditions. First, the ideal body present in Western culture is thin. Under our socially built world, to be obese is to be disabled, excluded from participation in physical spaces (e.g. airplane seats). Second, obesity is considered treatable through medication, such as GLP-1s. Third, medicine is affected by the social and political as value positive and effective (helping you lose that extra weight). Finally, these prior conditions – thin as ideal and obesity as most effectively medically treated – shape how humanity interprets their social, political, and economic issues, and influences people's attitude, behaviors, and decisions. To illustrate such interpretations, because it is easier to exist in Western capitalism with a thin body (e.g., perceived as productive, and not lazy; fit into standardized spaces like airplane and movie theatre seats), individuals are willing to pay the high price tag – roughly $500/month – for positive social perception and acceptance.</p>
+        <p>We have just examined the example of GLP-1's as a product of pharmableism, beginning a nascent, but needed critique. Further research on GLP-1's as pharmableist products should consider the following closely:</p>
+        <ul>
+          <li>What are the power structures behind dominant ideologies?</li>
+          <li>What are the values and assumptions influencing widely held beliefs?</li>
+          <li>What is the guise under which institutions and functionaries perpetuate these ideologies?</li>
+          <li>Who benefits from such ideologies, and who is excluded, harmed, or erased by them?</li>
+        </ul>
+        <p>Under a pharmableist critique these questions consider the power structure behind "curing disability" through pharmaceutical intervention. The pharmableist critique interrogates the values and assumptions that cause people to think disabled signifies broken, medicine represents cure, and normal translates to desirable. Further, it requires an investigation into the narratives told by the pharmaceutical and biotech industries. Under a pharmableist critique the concern attends to both those who benefit from medicalization, and those who are excluded, erased, or harmed by medicalization. By naming and critiquing the ideology underlining the medicalization of disabled bodyminds with the explicit goal of erasing disability, we can better understand the systems of power, like racism, ableism, classism, and sexism, that mediate our construction of the physical and social world around us. It is the environment that prevents participation, not the individual. From this perspective, we can begin to address disability by changing the environment and society, not the people with disabilities.</p>
+      </section>
+
+      <section id="remedy">
+        <h2>Pharmaceutical Intervention as Remedy</h2>
+        <p>Thus far, I have provided a critique of pharmaceuticals as a tool for ableism. That is not to say that pharmaceuticals do not have remedying effects. The industrialization of pharmaceuticals has hastened humanities move to technologically control our own organs. Ibuprofen can reduce inflammation, acetaminophen can help break fevers, SSRIs can regulate moods, and synthetic estrogen and progestin can prevent pregnancy. Pharmaceutical technology is remedying in nature, and it is regarded as such in the 21st century. As can be seen from the data collected in 2024, showing that roughly 70.5% of adults in the United States were taking medication prescribed to them.</p>
+        <p>For many, pharmaceutical intervention is transformative. Take for instance the transformation of the lived social and bodily realities of transgender people. Transgender people have existed for time immemorial but gain historical visibility in the 1850's with municipal laws prohibiting people from wearing the clothing of the opposite sex. In the decades following, transgender individuals were negatively depicted by oppressive counter-narratives. In 1952, "Christine Jorgenson, the first American to become famous for their gender transition, [began] her transition using hormone therapy and surgeries," also known as gender-affirming care. Under such care, transgender individuals are most often prescribed hormones and other medications to achieve bodies that are reflective of their gender identity. Despite break throughs in endocrinology that involved trans research subjects, transgender people remained hidden. It wasn't until the 1990's, following the advent of the Internet, its technological global change, and an excitement around President Bush's "New World Order," that mainstream media directed positive attention to transgender themes and trans activism. Even so, trans visibility is still mediated through oppressive state powers. For instance, as of November 19th, 2023, several states in the U.S. "have passed legislation banning or limiting access to this care, and many other states are actively considering the legislation."</p>
+        <p>The lived social and bodily realities of humans have changed dramatically with the inundation of modern pharmaceutical technologies. Regardless of technological, pharmaceutical progress, transgender individuals are prohibited access to gender and life affirming care under these bans. In 2021, the New York Times published a guest essay by Thomas Page McBee, a trans author. McBee speaks to his experience countering dueling narratives around his identity while starting testosterone in the early 2010's:</p>
+        <blockquote>"[D]espite the media fixation on a trite narrative about what it meant to be trans, I was not 'a man trapped in a woman's body' or any cliché like that[…]I was a man and I was born trans, and I could hold both of those realities without an explanation that could be written on the back of a napkin."</blockquote>
+        <p>McBee lived on the border of two realities: 1) his bodily reality (I am a man), and 2) the lived social reality (I am perceived by others as a woman). Gender-affirming pharmaceutical intervention allows McBee to bridge the gap between his lived bodily reality and his lived social reality.</p>
+        <p>Becoming entangled with pharmaceuticals was not a becoming man, but a becoming visible to the world around him. This becoming is always "in a stage of constant negotiation with the political and cultural forces attempting to shape us into simple, translatable packages." Gender-affirming pharmaceutical intervention is thus a remedy.</p>
+        <p>Pharmaceutical intervention need not have a visible outcome to be remedying. Attention deficit hyperactive disorder, more commonly known as ADHD, is often treated with medication. The desired outcome when taking medication is that one retains focus on a single task better than when they are not medicated. Generalized anxiety disorder is often treated with medications that work to inhibit the reuptake of serotonin in the brain, effectively regulating a person. Being chemically entangled with a central nervous system (CNS) stimulant or a selective serotonin reuptake inhibitor (SSRI) medication is not visible, but it is extremely impactful to one's participation in the constructed world around them. Without these medications, one may not have the option of participating in public spheres. Medication in these cases may present the option of participation to an individual where without it the option does not exist. Thus, such pharmaceutical intervention is remedying.</p>
+      </section>
+
+      <section id="poison">
+        <h2>Pharmaceutical Intervention as Poison</h2>
+        <p>As was illustrated in the previous section, even when pharmaceutical intervention has remedying features (e.g., gender-affirming properties of hormone therapy), governing powers (e.g., schools, hospitals, cities, states, nations, etc.) often mediate who has access to transformative medicalization. This section will consider the poisoning effect pharmaceuticals have in social and political spaces by engaging with the work of Achilles Mbembe on borderization.</p>
+        <p>In the work <em>Bodies as Borders</em>, Achilles Mbembe conveys entanglements between bodies and technology as repressive visiblizations of the "unknown, potentially risky body" for the sake of identification. Such identification is used for the project of confinement, exclusion, regulation, and control, articulated by Mbembe as the project of borderization. Borderization is "the process by which certain spaces are transformed into uncrossable places for certain classes of populations, who thereby undergo a process of racialization [.]" An illustration of this can be seen in North America's militarized border spaces between Canada and the United States, and Mexico and the United States. Walls, fences, metal detectors, passport checkpoints; all of these are tools to regulate the movement and speed of individuals across spaces.</p>
+        
+        <h3>Disabled Bodies as Borders</h3>
+        <p>Within an ableist paradigm, pharmaceutical intervention might perhaps be best understood through Achilles Mbembe's theory of borderization, where such reconceptualization regarding medicine suggests that the mobility and enclosure of risky bodies is pharmaceutically regulated. This is <em>pharmableist borderization</em>, the process by which certain spaces, internal or external, are transformed into uncrossable places for individuals identified as (dis)abled, whether that be physically disabled, mentally disabled, learning disabled, or racially disabled. Pharmaceuticals, most often, are intended to bring an individual back to a state of equilibrium from their socially perceived less-than-ideal state. When the medical drug is successful, the individual is granted (re)entry into society in a participatory capacity. Such pharmaceutical intervention is oppressive and subversive. An oppressive governance of mobility under pharmaceutical bordering looks like the forced medicalization of a risky individual. This forced medicalization need not be coercive. Forced medicalization occurs when an individual is required to take medication if they want to be allowed re-entry into participatory spaces. One might be forced into taking medication willfully when it means they are allowed into physical and social spaces they weren't previously accepted in.</p>
+        <p>While oppressive, pharmaceutical intervention can also be subversive of borderiz­ing powers. Given that pharmaceutical intervention is invisible, there is nothing readily visible for auxiliaries of the state to flag as non-compliant when medicalized individuals are attempting to (re)enter spaces of production. In this way, the medicalized individual may escape being identified as risky because their perceived behavior is compliant. The powers operating beneath these forms of borderization are rooted not only in ableism, but in other oppressive power structures, including racism, sexism, classism, ethnocentrism, etc.</p>
+        <p>Borderization is external under a racialized, ableist paradigm for the purpose of withholding pharmaceutical intervention from individuals in need. Such borders restrict who has access to pharmaceuticals. For instance, the borders erected by the Western healthcare system restrict Black bodies from accessing equitable pharmaceutical intervention. This borderization is one of exclusion.</p>
+        <p>We ought to consider what goes on internally when one becomes medicalized. The individual is undergoing an invisible, internal re-assemblage; a pharmaceutical cyborg-ing; an enclosure from oneself internally. I will call this a <em>self-borderization</em>. Self-borderization is the foreclosure of specific, non-ideal aspects of oneself from themself and the world.</p>
+
+        <h3>Consequences of Borders</h3>
+        <p>The consequences of borderization are complex. Mbembe's analysis in <em>Bodies as Borders</em> reveals the violent process that reshapes bodies, spaces, and global power structures, reinforcing inequality and exclusion. The impact of borderization is uneven. The global logic of contraction, containment, incarceration, and enclosure effects and affects bodies disparately. While some may move through spaces safely and efficiently, others may get stopped and detained. Who gets what treatment is only discernable under a critical analysis of underlying power structures. The consequences of pharmableist borderization are no different. Access and restriction to pharmaceutical intervention is mediated through the same power governed spaces are. While it is beyond the scope of this paper, a critical analysis of consequences arising from medicalized self-borderization could be paramount to scientific discussion regarding the justification of pharmaceutical interventions.</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>In seeing medical drugs as technological objects and machines, it becomes more apparent that pharmaceuticals are politically and socially affected. What we can take away from this is the understanding that the individual is not the subject in need of curing. Instead, it is the normative structuring of our social, physical, and emotional systems that need to be changed. Social and political systems medicalize individuals, exclude physically, mentally, intellectually, and emotionally diverging individuals from full participation in the day-to-day, and determine who is granted access to medicalized bodies. This normative structuring depends on pharmableist ideology and is deeply harmful to disabled, queer, BIPOC individuals.</p>
+        <p>How we portray medication in the media is not value neutral and carries with it a political and social valence, contributing to who can access and who is excluded from social, political, and physical spaces. By making Serena Williams a spokesperson for GLP-1's the viewer is led to believe that even athletes need to take GLP-1's. Moreover, by platforming a thin, athletic Black woman as opposed to a larger Black woman, the biopharmaceutical industry is telling the underlying narrative that bigger Black bodies are not worthy of being seen, and until the viewer takes GLP-1's and achieves Serena's body type, they too are not worthy of being seen.</p>
+        <p>By evaluating the remedying and poisoning effects of pharmaceutical intervention, and advancing a critique of pharmableist ideologies, this paper argues that the industrialization of pharmaceuticals under Western settler-colonial capitalism re-enforces oppressive ideologies and erects physical and social borders, controlling who has access to and who is excluded from social, economic, cultural, and physical participation. The argument contributes a novel term, pharmableism, that reframes the issue of using medicine to cure disability. While limited by a non-scientific perspective, the overall reasoning strengthens the field of healthcare by calling attention to the issues within the built environment. Future inquiry should apply the framework of pharmableism in healthcare policy and pharmaceutical advertisement, considering further how media contributes to ableist narratives when advertising pharmaceuticals, such as GLP-1s.</p>
+      </section>
+
+      <section id="bibliography" class="bibliography">
+        <h2>Bibliography</h2>
+        <ul class="biblio-list">
+          <li>Achille Mbembe. "Bodies as Borders." <em>WISER - University of the Witwatersrand</em>, Johannesburg, Africa's planetary futures, 2019, 5–18.</li>
+          <li>CDC. "Contraception and Birth Control Methods." Contraception, February 11, 2025. https://www.cdc.gov/contraception/about/index.html.</li>
+          <li>"Conceptualizing Disability: Three Models of Disability." Accessed November 26, 2025. https://www.apa.org/ed/precollege/psychology-teacher-network/introductory-psychology/disability-models.</li>
+          <li>Drugs.Com. "Acetaminophen: Uses, Dosage, Side Effects, Warnings." Accessed November 28, 2025. https://www.drugs.com/acetaminophen.html.</li>
+          <li>Drugs.Com. "Ibuprofen Uses, Dosage & Side Effects." Accessed November 28, 2025. https://www.drugs.com/ibuprofen.html.</li>
+          <li>Drugs.Com. "SSRI Drugs - List of Common Brands & Generics." Accessed November 28, 2025. https://www.drugs.com/drug-class/ssri-antidepressants.html.</li>
+          <li>Fanon, Frantz. <em>Black Skin, White Masks</em>. 1st ed., new Ed. Grove Press ; Distributed by Publishers Group West, 2008.</li>
+          <li>Feenberg, Andrew. <em>Questioning Technology</em>. 0 ed. Routledge, 2012. https://doi.org/10.4324/9780203022313.</li>
+          <li>Kavanaugh, Megan L., and Emma Pliskin. "Use of Contraception among Reproductive-Aged Women in the United States, 2014 and 2016." <em>F&S Reports</em> 1, no. 2 (2020): 83–93. https://doi.org/10.1016/j.xfre.2020.06.006.</li>
+          <li>Marino, Mark, Zohaib Jamal, and Marco A. Siccardi. "Pharmaceutics." In <em>StatPearls</em>. StatPearls Publishing, 2025. http://www.ncbi.nlm.nih.gov/books/NBK535375/.</li>
+          <li>Maurizio Lazzarato. "Epilog: The Machine." In <em>Tausend Maschinen</em>, by Gerald Raunig, translated by Mary O'Neil. 2008. https://asounder.org/resources/lazzarato_themachine.pdf.</li>
+          <li>McBee, Thomas Page. "Opinion | What I Saw in My First 10 Years on Testosterone." <em>Opinion. The New York Times</em>, June 25, 2021. https://www.nytimes.com/2021/06/25/opinion/transgender-transition-testosterone.html.</li>
+          <li>Mills, Charles W. "Ideal Theory" as Ideology. n.d.</li>
+          <li>Mitcham, Carl. <em>Thinking through Technology: The Path between Engineering and Philosophy</em>. University of Chicago Press, 1994.</li>
+          <li>"NCHS: Data Query System Application." Accessed November 6, 2025. https://nchsdata.cdc.gov/DQS/?topic=arthritis-diagnosis&subtopic=&group=&subgroup=&range=#nchs-home_prescription-drug-use/one-or-more/total/all-time-periods/2.</li>
+          <li>Poe, Kathryn. <em>Gender-Affirming Care Is Established Medical Practice</em>. 2023.</li>
+          <li>Research, Center for Drug Evaluation and. "Drugs@FDA Glossary of Terms." <em>FDA</em>, FDA, August 2, 2023. https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-glossary-terms.</li>
+          <li>Ro. "Serena Williams and Ro Join Forces." Accessed November 11, 2025. https://ro.co/weight-loss/serena/.</li>
+          <li>Ro. "Weight Loss Program Pricing." Accessed November 11, 2025. https://ro.co/weight-loss/pricing/.</li>
+          <li>Simon, Jonathan and Philosophy Documentation Center. "The Medical Drug as a Technological Object." <em>Techné: Research in Philosophy and Technology</em> 23, no. 1 (2019): 51–67. https://doi.org/10.5840/techne201951395.</li>
+          <li>Stryker, Susan. <em>Transgender History</em>. Seal Press, 2008.</li>
+          <li>Zanders, Edward D. "Introduction to Drugs and Drug Targets." <em>The Science and Business of Drug Discovery</em>, March 21, 2011, 11–27. https://doi.org/10.1007/978-1-4419-9902-3_2.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <p>Roxy Alexander • Disability Scholar & Activist</p>
+  </footer>
+</body>
+</html>
