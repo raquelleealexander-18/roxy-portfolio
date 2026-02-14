@@ -15,11 +15,11 @@
         /* 1. CSS RESET */
                 /* Guestbook Styles */
                 #guestbook {
-                    background: #F9EAF3;
+                    background: #fddcf0;
                     border-radius: 12px;
                     padding: 32px;
                     margin-bottom: 40px;
-                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
+                    box-shadow: 0 2px 8px rgba(207, 117, 163, 0.08);
                 }
                 #guestbook-form input, #guestbook-form textarea {
                     border: 1px solid var(--pink-pastel);
@@ -36,7 +36,7 @@
                     cursor: pointer;
                 }
                 #guestbook-messages div {
-                    background: #fff;
+                    background: #efb7db;
                     border-left: 4px solid var(--pink-pastel);
                     border-radius: 6px;
                     margin-bottom: 12px;
@@ -45,68 +45,29 @@
                     position: relative;
                 }
                 #guestbook-messages div::before {
-                    content: "";
+                    content: "★";
                     position: absolute;
                     left: -32px;
                     top: 12px;
                     font-size: 1.2rem;
                 }
-
-                /* Resources & Recommendations Styles */
-                #resources {
-                    background: #F6F9F6;
-                    border-radius: 12px;
-                    padding: 32px;
-                    margin-bottom: 40px;
-                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
-                }
-                #resources ul {
-                    margin-top: 16px;
-                }
-                #resources li {
-                    margin-bottom: 14px;
-                    font-size: 1.08rem;
-                    display: flex;
-                    align-items: center;
-                    word-wrap: break-word;
-                    overflow-wrap: break-word;
-                }
-                #resources li strong {
-                    margin-right: 8px;
-                }
-                #resources li::before {
-                    content: "";
-                    margin-right: 0;
-                    font-size: 1.1rem;
-                }
-                #resources li:nth-child(2)::before {
-                    content: "";
-                }
-                #resources li:nth-child(3)::before {
-                    content: "";
-                }
-                #resources a:hover {
-                    color: #D9A5C0;
-                    text-decoration: underline;
-                }
-
                 /* Timeline Styles */
                 #timeline {
-                    background: #f7d8c5;
+                    background: #d6e2facb;
                     border-radius: 12px;
                     padding: 32px;
                     margin-bottom: 40px;
-                    box-shadow: 0 2px 8px rgba(217,165,192,0.08);
+                    box-shadow: 0 3px 8px #c7c7fbf4;
                 }
                 #timeline ul {
-                    border-left: 3px solid var(--pink-pastel);
+                    border-left:;
                     padding-left: 24px;
                     margin-top: 16px;
                 }
                 #timeline li {
                     position: relative;
-                    margin-bottom: 40px;
-                    font-size: 1.08rem;
+                    margin-bottom: 16px;
+                    font-size: 1.05rem;
                 }
                 #timeline li::before {    
                     content: "";
@@ -115,16 +76,16 @@
                     top: 6px;
                     width: 16px;
                     height: 16px;
-                    background: var(--pink-pastel);
-                    border-radius: 50%;
-                    box-shadow: 0 0 4px rgba(186, 51, 128, 0.32);
+                    background:;
+                    border-radius:;
+                    box-shadow:;
                 }
                 #timeline li strong {
-                    color: var(--pink-pastel);
+                    color: #4a2e1c;
                     font-size: 1.1rem;
                 }
                 #timeline li:hover {
-                    background: rgba(217,165,192,0.07);
+                    background: rgba(63, 8, 33, 0.07);
                     border-radius: 6px;
                     transition: background 0.2s;
                 }
@@ -132,9 +93,9 @@
 
         /* 2. Warm, friendly visual identity */
         :root {
-            --bg: #FEFDFB;
-            --text: #6B5344;
-            --pink-pastel: #D9A5C0;
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
             --card-bg: #FFFFFF;
             --max-width: 900px;
             --border-width: 1px;
@@ -240,8 +201,8 @@
 
         /* Profile image */
         .profile-image {
-            width: 220px;
-            height: 220px;
+            width: 280px;
+            height: 280px;
             object-fit: cover;
             border-radius: 50%;
             border: 1px solid var(--pink-pastel);
@@ -464,102 +425,30 @@
 
     <header role="banner">
        <nav role="navigation" aria-label="Site navigation">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#cv">CV</a>
-            <a href="#blogs">Writing</a>
-            <a href="#community-engagement">Community Engagement and Leadership</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="writing.html">Writing</a>
+            <a href="resources.html">Resources</a>
+            <a href="podcast.html">Podcast</a>
             <a href="#contact">Contact</a>
         </nav>
+
+        <hr style="border: none; border-top: 2px solid #b0276e; margin: 20px 0; width: 100%; flex-basis: 100%;">
+        
         <div class="header-content">
             <h1>Roxy Alexander</h1>
-            <p class="subtitle">Disability Scholar & Activist</p>
-            <blockquote style="margin: 24px 0 0 0; padding: 18px 24px; background: #f7d8c5; border-left: 5px solid var(--pink-pastel); border-radius: 8px; font-size: 1.08rem; color: #6B5344;">
-                <strong>Pharmableism</strong> <span style="font-style:italic; color:#8A5A7B;">(a term I coined)</span>: While ableism takes many forms, the specific form of ableism affecting medical drugs is <strong>pharmableism</strong>: the belief that pharmaceuticals can, and therefore should, be used to cure ailments such as a disease, disorder, syndrome, or disability. This belief operates on a preceding belief that there exists an ideal bodymind to which we should strive for and that bodyminds that skew from the social imaginaries’ ideal are bad.
+            <p class="subtitle">Disability Scholar, Activist, & Certified AI Ethicist</p>
+            <blockquote style="margin: 24px 0 0 0; padding: 18px 24px; background: #ddeaf7; border-left: 5px solid var(--pink-pastel); border-radius: 8px; font-size: 1.08rem; color: #432511;">
+                <strong>Pharmableism</strong> <span style="font-style:italic; color:#8A5A7B;">(a term I coined)</span><br>
+                <p> Arising from a medical theory of disability, <strong>pharmableism</strong> is the belief that pharmaceuticals can, and therefore should, be used to cure ailments such as a disease, disorder, syndrome, or disability. Necessary to this belief is the existence of the ideal bodymind within the social imaginary, of which we strive for. Under pharmableism, bodyminds that skew from the social imaginaries' ideal are bad and can be 'corrected' with pharmaceutical intervention.</p>
             </blockquote>
         </div>
-        <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 160px, 220px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="220" height="220">
+        <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 200px, 280px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="280" height="280">
         
     </header>
 
     <main id="main-content" role="main">
-        <section id="about">
-            <h2>About</h2>
-            <p>I am a Graduate student at American University specializing in the ethical and social implications of <strong>Disability, Gender, Race, and Technology</strong>.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research</h2>
-            <p>My research focuses on the intersection of disability studies, gender, race, and technology. I examine how these fields intersect to shape experiences of inclusion and exclusion in health care, education, and in digital spaces for disabled communities.</p>
-        </section>
-
-        <section id="cv">
-            <h2>CV & Conferences</h2>
-            <p><a href="Raquel (Roxy) Alexander CV 2025.docx" style="color:var(--pink-pastel)">Download CV</a></p>
-            
-            <h3 style="margin-top: 28px; margin-bottom: 16px;">Conference Presentations</h3>
-            <div class="entry">
-                <p style="margin-bottom: 4px;"><strong>philoSOPHIA 2026 Villanova</strong> — April 2026</p>
-                <p style="font-style: italic; margin-bottom: 14px;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
-            </div>
-            <div class="entry">
-                <p style="margin-bottom: 4px;"><strong>Uehiro 2026 Graduate Student Conference</strong> — March 2026</p>
-                <p style="font-style: italic; margin-bottom: 14px;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
-            </div>
-            <div class="entry">
-                <p style="margin-bottom: 4px;"><strong>FEAST 2025</strong> — October 2025</p>
-                <p style="font-style: italic; margin-bottom: 14px;">"Unmasking Pharmableism"</p>
-            </div>
-            <div class="entry">
-                <p style="margin-bottom: 4px;"><strong>Transgressing Tradition</strong>, University of Oregon — May 2024</p>
-                <p style="font-style: italic; margin-bottom: 14px;">"Epistemic Injustice and ADHD"</p>
-            </div>
-            <div class="entry">
-                <p style="margin-bottom: 4px;"><strong>Praxis as First Philosophy</strong>, UNC Charlotte — April 2024</p>
-                <p style="font-style: italic;">"Epistemic Injustice and ADHD Girls in the K-12 Education System"</p>
-            </div>
-        </section>
-
-        <section id="community-engagement">
-            <h2>Community Engagement and Leadership</h2>
-            <p class="subtitle" style="margin-bottom:18px;">Committed to ongoing community engagement and advocacy for disability rights and inclusion.</p>
-            <ul class="service-list" aria-label="Service and community work">
-                <li>
-                    <strong>Graduate Student Representative</strong> for American University Philosophy and Religion department — Advocated for graduate student interests and contributed to departmental leadership and community building.
-                </li>
-                <li>
-                    <strong>Raquella.Crochets</strong> — small business with a social mission to support and uplift marginalized communities. Currently <a href="https://gofund.me/b408644ad">raising money for the unhoused community in DC</a> (raised $1000).
-                </li>
-                <li>
-                    <strong>AU Humanities Truck Fellow</strong> — bringing philosophical conversations into community spaces beyond the Ivory Tower.
-                </li>
-                <li>
-                    <strong>Co-host</strong> of the <em>Philosophy Across Generations</em> podcast; partnered with DC's Global Kids and the American Red Cross for community programming.
-                </li>
-                <li>
-                    <strong>Special Educational Assistant, Middle School</strong> — Worked closely with students to develop social-emotional learning skills, assisted in 504/IEP interventions, coached track, and managed costumes for the school play. Supported diverse learners and fostered an inclusive, creative environment.
-                </li>
-            </ul>
-        </section>
-
-        <section id="blogs">
-            <h2>Writing</h2>
-            <div id="blog-posts"></div>
-        </section>
-
-        <section id="resources">
-        <section id="timeline">
-            <h2>Academic & Leadership Timeline</h2>
-            <ul>
-                <li><strong>2026:</strong> Grad Student Rep, AU Philosophy & Religion</li>
-                <li><strong>2025:</strong> FEAST Conf. "Unmasking Pharmableism"; Humanities Truck Fellow; Podcast Co-host</li>
-                <li><strong>2024:</strong> Started MA, AU Philosophy (Social Policy & Ethics)</li>
-                <li><strong>2023:</strong> BA, UO Philosophy (Honors, PBK, Cum Laude); Thesis: "Epistemic Injustice & ADHD Girls"</li>
-                <li><strong>2019:</strong> Graduated Fairview HS, Boulder CO; NHS Historian, Student Council, Swim/Dive Captain</li>
-            </ul>
-        </section>
-
-        <section id="guestbook">
+         <section id="guestbook">
             <h2>Guestbook</h2>
             <p style="margin-bottom:18px; font-size:1.08rem; color:var(--text);">I'd love to hear from you! Leave a message, share your thoughts, or just say hello. Your comments and encouragement help build a welcoming community.</p>
             <form id="guestbook-form" style="margin-bottom:24px;">
@@ -573,21 +462,38 @@
                 <!-- Messages will appear here -->
             </div>
         </section>
-            <h2>Resources & Recommendations</h2>
-                <h3 style="margin-top: 28px; margin-bottom: 16px; padding-left: 1em;">Books</h3>
-                  <ul style="padding-left: 2.5em;">
-                    <li><strong>Against Technoableism</strong> by Ashley Shew</li>
-                    <li><strong>Disability Visibility</strong> by Alice Wong</li>
-                    <li><strong>Care Work</strong> by Leah Lakshmi Piepzna-Samarasinha</li>
-                    <li><strong>Pleasure Activism</strong> by adrienne marie brown</li> 
-                  </ul>
-                 <h3 style="margin-top: 28px; margin-bottom: 16px; padding-left: 1em;">Podcasts</h3>
-                  <ul style="padding-left: 2.5em;">
-                    <li><strong>Disability After Dark</strong></li>
-                    <li><strong>Philosophy Bites</strong></li>
-                  </ul>
-                 <h3 style="margin-top: 28px; margin-bottom: 16px; padding-left: 1em;">Definitions & Quotes</h3>
-                  <p style="padding-left: 2.5em;"><a href="definitions-and-quotes.html">View key definitions and quotes</a> related to disability justice, epistemic injustice, ableism, and more.</p>
+        <section id="community-engagement" style="background: #bcecf5e6; border-radius: 12px;">
+            <h2>Community Engagement and Leadership</h2>
+            <p class="subtitle" style="margin-bottom:18px;">Committed to ongoing community engagement and advocacy for disability rights and inclusion.</p>
+            <ul class="service-list" aria-label="Service and community work">
+                <li>
+                    <strong>Graduate Student Representative</strong> for American University Philosophy and Religion department — Advocated for graduate student interests and contributed to departmental leadership and community building.
+                </li>
+                <li>
+                    <strong><a href="about.html#raquella-crochets" style="color: var(--text); text-decoration: none;">Raquella.Crochets</a></strong> — small business with a social mission to support and uplift marginalized communities. Currently <a href="https://gofund.me/b408644ad">raising money for the unhoused community in DC</a> (raised $1000).
+                </li>
+                <li>
+                    <strong>AU Humanities Truck Fellow</strong> — bringing philosophical conversations into community spaces beyond the Ivory Tower.
+                </li>
+                <li>
+                    <strong>Co-host</strong> of the <em><a href="podcast.html">Philosophy Across Generations</a></em> podcast; partnered with DC's Global Kids and the American Red Cross for community programming.
+                </li>
+                <li>
+                    <strong>Special Educational Assistant, Middle School</strong> — Worked closely with students to develop social-emotional learning skills, assisted in 504/IEP interventions, coached track, and managed costumes for the school play. Supported diverse learners and fostered an inclusive, creative environment.
+                </li>
+            </ul>
+        </section>
+
+        <section id="timeline">
+            <h2>Academic & Leadership Timeline</h2>
+            <ul>
+                <li><strong>2026:</strong> <a href="about.html#masters-degree" style="color: var(--text); text-decoration: none;">Grad Student Rep, AU Philosophy & Religion</a></li>
+                <li><strong>2025:</strong> <a href="unmasking-pharmableism.html" style="color: var(--text); text-decoration: none;">FEAST Conf. "Unmasking Pharmableism"</a>; Humanities Truck Fellow; <a href="podcast.html" style="color: var(--text); text-decoration: none;">Podcast Co-host</a></li>
+                <li><strong>2024:</strong> <a href="about.html#masters-degree" style="color: var(--text); text-decoration: none;">Started MA, AU Philosophy (Social Policy & Ethics)</a></li>
+                <li><strong>2023-2024:</strong> Worked as an Special Educational Assistant, Middle School</li>
+                <li><strong>2019-2023:</strong> <a href="about.html#university-education-ba" style="color: var(--text); text-decoration: none;">BA, UO Philosophy (Honors, PBK, Cum Laude)</a>; Thesis: <a href="epistemic-injustice-adhd-girls.html" style="color: var(--text); text-decoration: none;">"Epistemic Injustice & ADHD Girls"</a></li>
+                <li><strong>2019:</strong> Graduated Fairview HS, Boulder CO; NHS Historian, Student Council, Swim/Dive Captain</li>
+            </ul>
         </section>
         <section id="contact">
             <h2>Connect</h2>
@@ -600,7 +506,6 @@
 
     <footer role="contentinfo">&copy; 2026 Roxy Alexander. All rights reserved.</footer>
 
-    <script src="posts.js"></script>
             <script>
             // Simple guestbook functionality (local only)
             document.getElementById('guestbook-form').addEventListener('submit', function(e) {
@@ -658,32 +563,6 @@
                     link.setAttribute('aria-current', 'page');
                 }
             });
-        });
-
-        // ===== RENDER BLOG POSTS =====
-        const postContainer = document.getElementById('blog-posts');
-        blogPosts.forEach(post => {
-            const article = document.createElement('article');
-            article.style.marginBottom = "40px";
-            article.style.transition = "all 0.3s ease";
-            article.setAttribute('role', 'article');
-            article.innerHTML = `
-                <div class="post-date">${post.date}</div>
-                <h3 class="post-title">
-                    <a href="${post.link}">${post.title}</a>
-                </h3>
-                <p>${post.excerpt}</p>
-            `;
-            
-            // Add hover animation to blog posts
-            article.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(8px)';
-            });
-            article.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-            });
-            
-            postContainer.appendChild(article);
         });
 
         // ===== EXPANDABLE CV ENTRIES WITH KEYBOARD SUPPORT =====

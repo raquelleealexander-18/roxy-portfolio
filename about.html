@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Roxy Alexander</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
+            --card-bg: #ffd8fc;
+            --max-width: 900px;
+            --border-width: 1px;
+            --radius: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: rgb(248, 220, 220);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @media (prefers-contrast: more) {
+            body {
+                font-weight: 500;
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--pink-pastel);
+            border-radius: 0;
+            box-shadow: none;
+            text-align: left;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--pink-pastel);
+        }
+
+        nav a.active {
+            color: var(--pink-pastel);
+        }
+
+        nav a:focus { outline: 3px solid var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background: rgb(249, 223, 242);
+            border: none;
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            border-radius: 0;
+            box-shadow: none;
+            transition: all 0.4s ease-out;
+        }
+
+        section.fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+            border-bottom-color: var(--pink-pastel);
+            border-bottom-width: 2px;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            display: inline-block;
+            padding: 0;
+            margin-bottom: 18px;
+            border-radius: 0;
+            font-size: 1.5rem;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li::before {
+            content: '★';
+            color: var(--pink-pastel);
+            margin-right: 8px;
+        }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        section a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        section a:hover::before {
+            width: 100%;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>About</h1>
+        <nav role="navigation" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="research.html">Research</a>
+            <a href="writing.html">Writing</a>
+            <a href="resources.html">Resources</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="images/A0475AB2-DD5F-4E48-B8E7-454E6D79552C_1_105_c.jpeg" alt="Photo of Roxy Alexander" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+            <p> Hi! My name is Roxy Alexander and I am a disability scholar, advocate, and AI Ethicist committed to re-designing a world that is inclusive and equitable for all.</p><br>
+
+            <p>I was born in Boulder, Colorado at the base of the Rocky Mountains. I moved to the Pacific Northwest when I was 18 to attend the University of Oregon. I began my undergraduate education as a premed student, but quickly fell in love with asking questions about the world and understanding the complexities of human experience through a critical lens. My love for critical theory has taken me to beautiful places, including to the capital of the United States: <i>Washington, D.C.</i></p>
+            <br>
+            <p>Currently I am a second year Graduate student at American University. As you are reading this I am obsessivley checking my email inbox, awaiting word from PhD and JD programs across the country. My long-term goal is to become a disabilty rights lawyer, advocating for policy change both in education and health care.</p>
+            <br><p> I am passionate about uplifting marginalized voices, which is reflected in my academic work, my podcast, and my business. I am excited to share my work with you and hope you find it engaging and thought-provoking!</p>
+        </section>
+        <section id="masters-degree">
+            <h2>Graduate Education, MA</h2><br>
+            <subheading style="font-style: italic; margin-bottom: 20px;">American University, 2024-2026</subheading>
+           <bbr>
+            <ul style="margin-left: 40px;">
+                <li>
+                    <subheading style="font-style: italic; margin-bottom: 20px;">Masters of Arts in Philosophy; Social Policy and Applied Ethics</subheading>
+                </li>
+                <li>
+                    <subheading style="font-style: italic; margin-bottom: 20px;">Artificial Intelligence: Ethics and Society Certificate</subheading>
+                </li>
+            </ul>
+            </bbr>
+
+            <br>
+            <img src="images/08E8E0DE-947F-4D7A-8E56-1ABDBF507ACA_1_105_c.jpeg" alt="Roxy standing in front of the National Portrait Gallery in Washington DC, wearing blue jean overalls, a white shirt, and a yellow baseball cap that says Art is Activism" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+            <p>In her <strong>First year</strong>, Roxy joined the Department of Philosophy and Religions <strong>Graduate Students Council</strong> (GSC) where she served as <i>Secretary</i>. As a member of the GSC, Roxy launched a community aid project &mdash;<i> The Graduate Student Library</i>&mdash; with the goal of providing graduate students access to texts often assigned in grad courses for free. Along with her work on the GSC, she revived and co-led AU's Minorities and Philosophy chapter as chapter <strong>president</strong>. Additionally she <strong>co-chaired</strong> the <i>Student Tenure Hiring Committee</i>, ensuring student wishes were represented in the hiring of a tenure-line position for an AI Ethicist. In the spring, Roxy <strong>organzied</strong> the annual Hurst Lecture &mdash;featuring keynote speaker Dr. José Medina &mdash; and <strong>moderated </strong> the Hurst Lecture <i>Graduate Panel</i>.</p>
+         <br>
+         <p>In her <strong>Second year</strong>, Roxy has led the GSC as the <strong>Graduate Representative</strong>, responsible for attending faculty meetings as the voice of graduate students, ensuring clear communication between students and faculty, and organizing community events and workshops. Notably, Roxy has organized a series of workshops: <i>Writing for Academics</i>, <i>What to Know About Conferencing</i>, and <i>Publishing 101</i>. </p>
+         <p>Additionally, Roxy holds a <strong>Fellowship</strong> with AU Humanities Truck, bringing philosophical dialogue into DC community spaces. Roxy and her co-collaborator have partnered with <i>the American Red Cross</i> and <i>Global Kids</i> to host the podcast, <i>Philosophy Across Generations</i> as well as attend local events, uplifting the DC community.</p>
+        <br>
+            <p> During her time at AU, Roxy has worked as a <strong>Graduate Teaching Assistant</strong> for <i>Introduction to Bioethics, Introduction to Western Philosophy</i>, and <i> Introduction to Formal Logic.</i></p>
+</section>
+        <section id="university-education-ba">
+            <h2>University Education, BA</h2>
+                <ul>
+                    <subheading style="font-style: italic; margin-bottom: 20px;">University of Oregon, 2019-2023</subheading>
+                </ul><br>
+                <ul>  
+                     <img src="images/1D21687E-7532-47B8-AE9D-9935E4DC4A44_1_105_c.jpeg" alt="Roxy smiling and making a O shape with her hands in front of Autzen Stadium at the University of Oregon, surrounded by green grass and trees, wearing University of Oregon athletics attire" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+                    <p>Roxy received her BA in Philosophy and minored in Legal studies from the University of Oregon. Upon graduation, Roxy recieved <strong>honors</strong>,<strong>Cum Laude</strong>, and the <strong>Phi Beta Kappa</strong> distinction. Her <u>honors thesis</u> focused on the <strong>Epistemic Harm ADHD Girls face in the United States K-12 Education System.</strong> Her scholarship engaged with the work of José Medina, Kristie Dotson, Judith Butler, Simone de Beuvoir, and more. Largely phenomenological, this work centered the testimony of ADHD girls educated within the U.S. K-12 system, along with the testimonies of paraeducators from the larger Portland area.</p>
+                    <br>
+                    <p>Roxy's commitment to uplifting marginalized voices goes beyond the walls of academia. In her first year at UO, Roxy served as the <strong>Sexual Assault Prevention Chair </strong> for Sigma Kappa, facilitating informational workshops, attending panhellenic meetings, and working individually with survivors of sexual violence. During her second year, Roxy managed <strong>"Thots About Women's Health," </strong> a social media blog dedicated to critiquing, as well as bridging, informational gaps on women's health and gender violence.</p>
+                    <p>Roxy also served as a member on <strong>UO Mock Trial</strong>, and as a Junior joined Fugue, the <strong>UO Women's Frisbee Team</strong>. Senior year, Roxy became a member of <strong>UO's Minorities And Philosophy chapter</strong> and the <strong>Philosophy Club</strong>. Her membership in these activities would later inspire her leadership in graduate school.</p>
+                </ul>
+        </section>
+        <section id="raquella-crochets">
+            <h2><a href="https://www.instagram.com/raquella.crochets" style="color: var(--text); text-decoration: none;">Raquella.Crochets</a></h2>
+                 <ul>
+                    <subheading style="font-style: italic; margin-bottom: 20px;">Sole Proprietor, Est. 2025</subheading>
+                </ul><br>
+            <img src="images/6F27A7F2-4F6D-4DDE-A0A7-C23B23742515_1_201_a.jpeg" alt="Raquella.Crochets" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+                <p>At the height of the pandemic, disillusioned by fast-fashion, Roxy fell in love with the practice of taking a simple ball of yarn and turning it into a unique, long-lasting piece of clothing. After crafting a hoard of hand-made crocheted garments for friends and family she decided her talent would be better shared with the world. She sold her work sporadically until late 2024 when she learned of her dads housing instability. She took him into her home that she shared with her then partner until her dad could find a job and save enough money for an apartment of his own. In the meantime, she supplemented her small graduate stipend by selling her work at local DC maker markets. At the start of this year she launched Raquella.Crochets, a small-business based in Washington D.C. with a social impact model. Since the launch, she has sold her work at local markets, shipped across the country, and gained a healthy online following.</p><br>
+        </section>
+
+        <section id="dive-master">
+            <h2>Dive Master</h2>
+            <img src="images/AA7A211B-16D6-4185-BAF5-0BD27870EBC7_1_105_c.jpeg" alt="Roxy as a Dive Master" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+            <p> Roxy is a <strong>PADI licensed Dive Master</strong>.</p><br>
+            <p> Roxy's love of diving began at 10 years old when she became open water certified. Land locked in the state of Colorado, Roxy had limited access to diving opportunities, but she remained passionate about the sport and sought out every chance to dive whenever possible. At 18, Roxy's father moved to Florida. There, Roxy was able to work as a <strong>deck hand</strong> on a dive boat and earn her <strong>Rescue Diver Certification</strong> and her <strong>Dive Master Certification.</strong></p>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
+    </footer>
+</body>
+</html>

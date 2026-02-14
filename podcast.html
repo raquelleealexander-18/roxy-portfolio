@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy Across Generations | Roxy Alexander</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
+            --card-bg: #FFFFFF;
+            --max-width: 900px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            border-bottom: 2px solid var(--pink-pastel);
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--text);
+            font-size: 1.3rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after { width: 100%; }
+        nav a:hover, nav a.active { color: var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background:rgb(249, 223, 242);
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            transition: all 0.4s ease-out;
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        section a:hover { text-decoration: underline; }
+
+        ul {
+            padding-left: 1.5em;
+            margin-top: 12px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .episode {
+            margin-bottom: 24px;
+            padding: 16px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .episode:hover {
+            border-left-color: var(--pink-pastel);
+            background-color: rgba(217, 165, 192, 0.05);
+            padding-left: 20px;
+        }
+
+        .episode-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .episode-date {
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Philosophy Across Generations</h1>
+        <p class="subtitle">A podcast bridging philosophical conversations across ages</p>
+        <nav role="navigation" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="writing.html">Writing</a>
+            <a href="resources.html">Resources</a>
+            <a href="podcast.html" class="active">Podcast</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section>
+            <h2>About the Podcast</h2>
+            <p><em>Philosophy Across Generations</em> brings philosophical conversations into community spaces, breaking down the walls of the Ivory Tower. As co-host, I partner with DC's Global Kids and the American Red Cross to create programming that makes philosophy accessible and relevant to people of all ages.</p>
+            <p style="margin-top: 16px;">The podcast explores how philosophical ideas shape our everyday lives, examining questions of ethics, justice, identity, and meaning through intergenerational dialogue.</p>
+        </section>
+
+        <section>
+            <h2>Community Partners</h2>
+            <ul>
+                <li><strong>DC's Global Kids</strong> — Youth-focused community programming</li>
+                <li><strong>American Red Cross</strong> — Community outreach and engagement</li>
+                <li><strong>AU Humanities Truck</strong> — Bringing philosophy to public spaces</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Episodes</h2>
+            <p style="margin-bottom: 20px; font-style: italic;">New episodes coming soon. Check back for updates!</p>
+            
+            <!-- Episode template for future additions:
+            <div class="episode">
+                <p class="episode-title">Episode Title</p>
+                <p class="episode-date">Date</p>
+                <p>Episode description...</p>
+            </div>
+            -->
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
+    </footer>
+</body>
+</html>

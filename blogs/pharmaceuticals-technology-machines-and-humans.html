@@ -18,10 +18,10 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #FEFDFB;
-      --brown-deep: #6B5344;
-      --pink-pastel: #D9A5C0;
-      --purple-royal: #8B6E8F;
+      --bg: #f3ecf9;
+      --brown-deep: #4a2e1c;
+      --pink-pastel: #b0276e;
+      --purple-royal: #8e5f94;
       --cream: #FFFAF7;
     }
 
@@ -41,14 +41,28 @@
     }
 
     header.article-header {
-      background: white;
+      background: #f3ecf9;
       border-bottom: 2px solid var(--pink-pastel);
       padding: 40px 0;
       margin-bottom: 40px;
       box-shadow: none;
       border-radius: 0;
     }
+          .back-nav {
+        font-family: 'Titan One', cursive;
+        text-decoration: none;
+        color: var(--purple-royal);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 20px;
+        transition: all 0.2s;
+        }
 
+      .back-nav:hover {
+        color: var(--pink-bold);
+        transform: translateX(-4px);
+      } 
     h1 {
       font-family: 'Lora', serif;
       font-size: clamp(2rem, 5vw, 2.6rem);
@@ -67,7 +81,7 @@
     }
 
     .meta {
-      color: #777;
+      color: #232037;
       font-size: 0.95rem;
       display: flex;
       gap: 16px;
@@ -242,6 +256,7 @@
 </head>
 <body>
   <header class="article-header wrap" id="top">
+    <a href="../writing.html" class="back-nav">← Back to Writing Section</a>
     <h1>Pharmaceuticals — Technology, Machines, and Humans</h1>
     <p class="dek">Advancing a critical framework that treats pharmaceuticals as technological objects and machines, introducing <em>pharmableism</em> and reorienting what we choose to “fix.”</p>
     <div class="meta">

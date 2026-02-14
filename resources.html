@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Recommendations | Roxy Alexander</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
+            --card-bg: #ffd8fc;
+            --max-width: 900px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            border-bottom: 2px solid var(--pink-pastel);
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after { width: 100%; }
+        nav a:hover, nav a.active { color: var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background: rgb(249, 223, 242);
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            transition: all 0.4s ease-out;
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        section a:hover { text-decoration: underline; }
+
+        ul {
+            padding-left: 1.5em;
+            margin-top: 12px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Resources & Recommendations</h1>
+        <nav role="navigation" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="writing.html">Writing</a>
+            <a href="resources.html" class="active">Resources</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section>
+            <h2>Books</h2>
+            <img src="images/BE109652-7C4F-4C3D-BFF2-C22799161AF0.JPG" alt="Books" style="width: 280px; height: auto; border-radius: 12px; float: right; margin: 0 0 20px 20px; border: 2px solid var(--pink-pastel);">
+            <ul>
+                <li><strong>Against Technoableism</strong> by Ashley Shew</li>
+                <li><strong>Disability Visibility</strong> by Alice Wong</li>
+                <li><strong>Care Work</strong> by Leah Lakshmi Piepzna-Samarasinha</li>
+                <li><strong>Pleasure Activism</strong> by adrienne marie brown</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Podcasts</h2>
+            <ul>
+                <li><strong>Disability After Dark</strong></li>
+                <li><strong>Philosophy Bites</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Definitions & Quotes</h2>
+            <p><a href="definitions-and-quotes.html">View key definitions and quotes</a> related to disability justice, epistemic injustice, ableism, and more.</p>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
+    </footer>
+</body>
+</html>

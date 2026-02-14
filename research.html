@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Roxy Alexander</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
+            --card-bg: #ffd8fc;
+            --max-width: 900px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            border-bottom: 2px solid var(--pink-pastel);
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after { width: 100%; }
+        nav a:hover, nav a.active { color: var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background: rgb(249, 223, 242);
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            transition: all 0.4s ease-out;
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        section a:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Research</h1>
+        <nav role="navigation" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html" class="active">Research</a>
+            <a href="writing.html">Writing</a>
+            <a href="resources.html">Resources</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section>
+            <h2>Research Focus</h2>
+            <p> I am interested in the harms of pharmableism and the relationship between ableism and anti-blackness, particularly in relation to pharmaceutical interventions and neurodiversity. My current work examines how pharmaceuticals are technological objects and machines that shape human experiences, and how they can both enable and constrain individuals.</p>
+           <br>
+            <p><strong>Method Areas:</strong>  Qualitative and quantitative approaches including textual analysis, community interviews, and data analysis.</p>
+        <br>
+            <p><strong>Theory/Interdisciplinary Areas:</strong> Bioethics, legal studies, social epistemology, feminist phenomenology, critical theories (feminist, queer, Black, and disability studies), and science and technology studies.</p>
+        <br>
+        <p><strong>Application Areas:</strong> Health care, education, and digital spaces — examining inclusion/exclusion for disabled communities at the intersection of disability, gender, race, and technology.</p>
+        </section>
+
+        <section>
+            <h2>CV & Conferences</h2>
+            <p><a href="Raquel (Roxy) Alexander CV 2025.docx">Download CV</a></p>
+            
+            <h3 style="margin-top: 28px; margin-bottom: 16px;">Conference Presentations</h3>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>philoSOPHIA 2026 Villanova</strong> — April 2026</p>
+                <p style="font-style: italic;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>Uehiro 2026 Graduate Student Conference</strong> — March 2026</p>
+                <p style="font-style: italic;">"Pharmaceuticals: Technology, Machines, and Humans"</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>Graduate Thesis Defense</strong> — November 2025</p>
+                <p style="font-style: italic;">"Epistemic Harm: Unspoken Testimony and Masking as Testimonial Smothering"</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>FEAST 2025</strong> — October 2025</p>
+                <p style="font-style: italic;">"Unmasking Pharmableism"</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>Transgressing Tradition</strong>, University of Oregon — May 2024</p>
+                <p style="font-style: italic;">"Epistemic Injustice and ADHD"</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 4px;"><strong>Praxis as First Philosophy</strong>, UNC Charlotte — April 2024</p>
+                <p style="font-style: italic;">"Epistemic Injustice and ADHD Girls in the K-12 Education System"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing | Roxy Alexander</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f3ecf9;
+            --text: #4a2e1c;
+            --pink-pastel: #b0276e;
+            --card-bg: #ffd8fc;
+            --max-width: 900px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0 20px;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--pink-pastel);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        a:focus {
+            outline: 3px solid var(--pink-pastel);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
+
+        header {
+            padding: 40px 0;
+            border-bottom: 2px solid var(--pink-pastel);
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        nav { 
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--pink-pastel);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after { width: 100%; }
+        nav a:hover, nav a.active { color: var(--pink-pastel); }
+
+        section {
+            padding: 40px;
+            background: rgb(249, 223, 242);
+            border-bottom: 1px solid var(--pink-pastel);
+            margin-bottom: 30px;
+            transition: all 0.4s ease-out;
+        }
+
+        section:hover {
+            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        section a {
+            color: var(--pink-pastel);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        section a:hover { text-decoration: underline; }
+
+        .post-date {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .post-title a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .post-title a:hover {
+            color: var(--pink-pastel);
+        }
+
+        article {
+            margin-bottom: 40px;
+            padding: 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        article:hover {
+            border-left-color: var(--pink-pastel);
+            background-color: rgba(217, 165, 192, 0.05);
+            padding-left: 18px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-top: 1px solid var(--pink-pastel);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 24px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Writing</h1>
+        <nav role="navigation" aria-label="Site navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="writing.html" class="active">Writing</a>
+            <a href="resources.html">Resources</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section>
+            <h2>Blog Posts</h2>
+            <p style ="font-style: italic; margin-bottom: 20px;">Personal essays, reflections, and shorter pieces.</p>
+            <div id="blog-posts"></div>
+            <article>
+                <div class="post-date">June 6th, 2022</div>
+                <h3 class="post-title">
+                    <a href="https://omstars.com/blog/culture/i-choose-self-love-how-yoga-taught-me-to-accept-my-autism-diagnosis/">I Choose Self-Love: How Yoga Taught Me to Accept My Autism Diagnosis</a>
+                </h3>
+            </article>
+        </section>
+
+        <section>
+            <h2>Papers</h2>
+            <p style="font-style: italic; margin-bottom: 20px;">Academic publications and works in progress.</p>
+            <article>
+                <div class="post-date">December 2025</div>
+                <h3 class="post-title">
+                    <a href="blogs/pharmaceuticals-technology-machines-and-humans.html">Pharmaceuticals: Technology, Machines, and Humans</a>
+                </h3>
+                <p>My work calls for a shift in thinking: from curing individuals we deem abnormal to transforming environments and social systems, reframing healthcare policy and pharmaceutical advertising through a pharmableist critique.</p>
+            </article>
+            <article>
+                <div class="post-date">October 2025</div>
+                <h3 class="post-title">
+                    <a href="unmasking-pharmableism.html">Unmasking Pharmableism</a>
+                </h3>
+                <p>Introducing <em>pharmableism</em> — an ideology that reinforces pharmaceutical intervention as a solution to disability — and examining its reproduction within the U.S. education system through speculative fiction analysis of Percy Jackson.</p>
+            </article>
+            <article>
+                <div class="post-date">May 2023</div>
+                <h3 class="post-title">
+                    <a href="epistemic-injustice-adhd-girls.html"> Epistemic Injustice and ADHD Girls in the K-12 Education System</a>
+                </h3>
+                <p><i>Undergraduate Honors Thesis.</i> Examining the ways in which ADHD girls experience epistemic injustice within the K-12 education system.</p>
+            </article>
+            <article>
+                <div class="post-date">October 2022</div>
+                <h3 class="post-title">
+                    <a href="blogs/2022_CSWS_Annual_Rvw.pdf">Statement on Overturning Roe v. Wade</a>
+                </h3>
+                <p> I provide commentary as one of many contributors in an article on the implications of overturning Roe v. Wade. This article was published in the 2022 Center for the Study of Women in Society Annual Review. <i>See page 4 of the journal for my statement.</i></p>
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
+    </footer>
+
+    <script src="posts.js"></script>
+    <script>
+        const postContainer = document.getElementById('blog-posts');
+        blogPosts.forEach(post => {
+            const article = document.createElement('article');
+            article.setAttribute('role', 'article');
+            article.innerHTML = `
+                <div class="post-date">${post.date}</div>
+                <h3 class="post-title">
+                    <a href="${post.link}">${post.title}</a>
+                </h3>
+                <p>${post.excerpt}</p>
+            `;
+            postContainer.appendChild(article);
+        });
+    </script>
+</body>
+</html>
