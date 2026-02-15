@@ -89,6 +89,21 @@
                     border-radius: 6px;
                     transition: background 0.2s;
                 }
+
+                .side-by-side {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                .side-by-side section {
+                    flex: 1;
+                }
+
+                @media (max-width: 800px) {
+                    .side-by-side {
+                        flex-direction: column;
+                    }
+                }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         /* 2. Warm, friendly visual identity */
@@ -454,6 +469,7 @@
     </header>
 
     <main id="main-content" role="main">
+        <div class="side-by-side">
         <section id="community-engagement" style="background: #bcecf5e6; border-radius: 12px;">
             <h2>Community Engagement and Leadership</h2>
             <p class="subtitle" style="margin-bottom:18px;">Committed to ongoing community engagement and advocacy for disability rights and inclusion.</p>
@@ -487,6 +503,7 @@
                 <li><strong>2019:</strong> Graduated Fairview HS, Boulder CO; NHS Historian, Student Council, Swim/Dive Captain</li>
             </ul>
         </section>
+        </div>
         <section id="contact">
             <h2>Connect</h2>
             <p>Academic Email: <a href="mailto:ra0962a@american.edu" style="color:var(--pink-pastel)">ra0962a@american.edu</a></p>
