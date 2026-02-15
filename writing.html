@@ -180,6 +180,21 @@
             margin-top: 40px;
         }
 
+        .sections-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .sections-container section {
+            flex: 1;
+        }
+
+        @media (max-width: 800px) {
+            .sections-container {
+                flex-direction: column;
+            }
+        }
+
         @media (max-width: 600px) {
             section { padding: 24px; }
             nav a { display: block; margin: 10px 0; }
@@ -203,6 +218,7 @@
     </header>
 
     <main id="main-content" role="main">
+        <div class="sections-container">
         <section>
             <h2>Blog Posts</h2>
             <p style ="font-style: italic; margin-bottom: 20px;">Personal essays, reflections, and shorter pieces.</p>
@@ -247,6 +263,7 @@
                 <p> I provide commentary as one of many contributors in an article on the implications of overturning Roe v. Wade. This article was published in the 2022 Center for the Study of Women in Society Annual Review. <i>See page 4 of the journal for my statement.</i></p>
             </article>
         </section>
+        </div>
     </main>
 
     <footer role="contentinfo">

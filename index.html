@@ -108,8 +108,14 @@
             font-family: 'Lora', serif;
             line-height: 1.7;
             color: var(--text);
-            background-color: var(--bg);
-            padding: 0 20px;
+            background-color: #f3ecf9;
+            background-image: 
+                linear-gradient(45deg, #efe4f5 25%, transparent 25%),
+                linear-gradient(-45deg, #efe4f5 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #efe4f5 75%),
+                linear-gradient(-45deg, transparent 75%, #efe4f5 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;            padding: 0 20px;
             font-size: 1.05rem;
             font-weight: 400;
         }
@@ -201,10 +207,10 @@
 
         /* Profile image */
         .profile-image {
-            width: 280px;
-            height: 280px;
+            width: 300px;
+            height: 425px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 16px;
             border: 1px solid var(--pink-pastel);
             display: block;
             flex-shrink: 0;
@@ -443,7 +449,7 @@
                 <p> Arising from a medical theory of disability, <strong>pharmableism</strong> is the belief that pharmaceuticals can, and therefore should, be used to cure ailments such as a disease, disorder, syndrome, or disability. Necessary to this belief is the existence of the ideal bodymind within the social imaginary, of which we strive for. Under pharmableism, bodyminds that skew from the social imaginaries' ideal are bad and can be 'corrected' with pharmaceutical intervention.</p>
             </blockquote>
         </div>
-        <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 200px, 280px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="280" height="280">
+        <img src="images/profile-480.jpg" srcset="images/profile-320.jpg 320w, images/profile-480.jpg 480w" sizes="(max-width:600px) 200px, 280px" alt="Photo of Roxy Alexander" class="profile-image" loading="lazy" width="280" height="300">
         
     </header>
 
