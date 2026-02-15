@@ -429,8 +429,86 @@
         }
 
         @media (max-width: 600px) {
-            section { padding: 24px; }
-            nav a { display: block; margin: 10px 0; }
+            body {
+                padding: 0 16px;
+            }
+            
+            header {
+                padding: 24px 0;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-content {
+                order: 2;
+            }
+            
+            .profile-image {
+                order: 1;
+                width: 180px;
+                height: 240px;
+                margin: 0 auto 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                margin-top: 16px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 8px 0;
+                padding: 14px 20px;
+                font-size: 1.1rem;
+                background: rgba(255,255,255,0.5);
+                border-radius: 8px;
+                text-align: center;
+            }
+            
+            nav a:hover, nav a:active {
+                background: var(--pink-pastel);
+                color: white;
+            }
+            
+            section {
+                padding: 24px 20px;
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            #guestbook, #timeline {
+                padding: 24px 20px;
+            }
+            
+            #timeline li {
+                font-size: 0.95rem;
+            }
+            
+            blockquote {
+                padding: 14px 16px !important;
+                font-size: 1rem !important;
+            }
+            
+            .service-list li {
+                font-size: 0.95rem;
+                padding: 12px 0;
+            }
+            
+            footer {
+                padding: 24px 0;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
