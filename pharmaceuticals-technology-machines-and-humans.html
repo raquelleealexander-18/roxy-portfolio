@@ -10,6 +10,9 @@
   <meta property="og:description" content="A critical framework positioning pharmaceuticals as technological objects and machines that shape and are shaped by social and political realities, introducing 'pharmableism'." />
   <meta property="og:locale" content="en_US" />
   
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap" rel="stylesheet">
@@ -26,6 +29,26 @@
     }
 
     html { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (prefers-contrast: more) {
+      body {
+        font-weight: 500;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
 
     body {
       font-family: 'Lora', serif;
@@ -48,7 +71,7 @@
     }
 
     header.article-header {
-      background: ##f3ecf9;
+      background: #f3ecf9;
       border-bottom: 2px solid var(--pink-pastel);
       padding: 40px 0;
       margin-bottom: 40px;

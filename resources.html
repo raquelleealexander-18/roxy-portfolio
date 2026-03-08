@@ -3,194 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources & Recommendations | Roxy Alexander</title>
+    <title>Roxy Alexander | Disability Scholar, Activist, & AI Ethicist</title>
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    
+        <!-- Fonts from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg: #c3bfef;
-            --text: #4a2e1c;
-            --pink-pastel: #b0276e;
-            --card-bg: #ffd8fc;
-            --max-width: 900px;
-        }
-
+<style>
         html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Lora', serif;
-            line-height: 1.7;
-            color: var(--text);
-            background-color: #c3bfef;
-            padding: 0 20px;
-            font-size: 1.05rem;
-            font-weight: 400;
-        }
-
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background-color: var(--pink-pastel);
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 100;
-        }
-
-        .skip-link:focus { top: 0; }
-
-        a:focus {
-            outline: 3px solid var(--pink-pastel);
-            outline-offset: 4px;
-        }
-
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
         }
+        @media (prefers-contrast: more) {
+            body {
+                font-weight: 500;
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+    :root {
+        --bg-color: #016180; 
+        --header: #b7cfff;
+        --community: #c3d5f8;
+        --blue-accent: #94d4fc;
+        --card-bg: #6a9eb0 ;
+        --blue: #5992bd;
+        --chill-blue: #4a8cb0;
+        --guest-book: #b6d6fc;
+        --tan: #f8ede5;
+        --brown: #8c5c47;
+        --dark-brown: #4c2c17;
+        --text-color: #2d1c0b;
 
-        header, main, footer { max-width: var(--max-width); margin: 0 auto; }
-
-        header {
-            padding: 40px 0;
-            border-bottom: 2px solid var(--pink-pastel);
-            margin-top: 30px;
-            margin-bottom: 40px;
+        --max-width: 1000px;
+        --border-width: 1px;
+        --radius: 0;
+        }
+    body {
+        font-family: 'Lora', serif;
+        line-height: 1.7;
+        color: var(--text-color);
+        background-color: #016180;            
+        font-size: 1.05rem;
+        font-weight: 400;
+        background-image: 
+            radial-gradient(circle, #4a8cb0 1px, transparent 1px),
+            radial-gradient(circle, #4a8cb0 1px, transparent 1px);
+        background-size: 60px 60px; 
+        background-position: 0 0, 30px 30px; 
+        background-attachment: fixed;
         }
 
-        h1 {
-            font-family: 'Lora', serif;
-            font-weight: 600;
-            font-size: clamp(2.2rem, 7vw, 3.5rem);
-            color: var(--text);
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+    header {
+        padding: 50px 50px 30px 50px;
+        background: rgb(181, 212, 250);
+        background-size: 1000px 1000px 1000px 1000px;
+        max-width: 5000px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        position: sticky;
+        top: 0; 
+        align-items: center;
+            z-index: 1000;
+            border-bottom: 5px solid var(--chill-blue);
+        }
+    .header-content {
+        flex: 1;
+        min-width: 1000px;
+        font-size: 50px;
+        }
+    h1 {
+        font-family: 'Fascinate', cursive;
+        font-weight: 600;
+        font-size: 50px;
+        color: var(--dark-brown);
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        }
+    h2 {
+        font-family: 'Lora', serif;
+        font-weight: 600;
+        color: var(--text-color);
+        display: inline-block;
+        padding: 0;
+        margin-bottom: 18px;
+        border-radius: 0;
+        font-size: 1.5rem;
+        }
+    hr {
+            border: none; 
+            border-top: 3px solid #4a8cb0; 
+            margin: 10px 0 0 0; 
+            width: 100%; 
+            flex-basis: 100%;
+        }
+    blockquote {
+        background:#b2e0f6;
+        border-left: 15px solid #4c2c17;
+        border-radius: 10px;
+        margin: 100px 100px 10px 100px;
+        padding: 50px 50px 50px 50px;
+        font-style: none;
+        font-size: 20px; 
+        color: #4a2e1c; 
+        font-weight: 400;
+        align-items: flex-end;
+        max-width: 70%;
+        }   
+
+    .subtitle {
+        color: var(--text);
+        font-size: 20px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 16px;
+        font-family: '', serif;
         }
 
-        nav { 
-            width: 100%;
-            margin-top: 20px;
-            text-align: center;
+    .profile-image {
+        height: 398px;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+        flex-shrink: 0;
+        margin: 100px 100px 10px 50px; 
+        border: 10px circle #4c2c17; 
+        max-width: 60%;
+        max-height: 60% ;  
+        align-self: flex-start;">
         }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-family: 'Lora', serif;
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 8px 14px;
-            margin: 0 6px;
-            transition: all 0.3s ease;
-            display: inline-block;
-            position: relative;
+    nav { 
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        }
+    nav a {
+        text-decoration: none;
+        color: var(--text);
+        font-family: 'Lora', serif;
+        font-weight: 1000;
+        font-size: 1.0rem;
+        padding: 0px 14px 0 14px;
+        margin: 0 6px 0 0 ;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        display: inline-block;
+        position: relative;
+        border-bottom: 2px solid transparent;
+        }
+    nav a:hover {
+        color:rgb(73, 136, 244);
+        border-bottom-color: rgb(73, 136, 244);
+        }
+    nav a.active {
+        color: rgb(73, 136, 244);
+        border-bottom-color: rgb(73, 136, 244);
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--pink-pastel);
-            transition: width 0.3s ease;
+    section {
+        padding: 40px;
+        background:#b2e0f6;
+        border: none;
+        border-bottom: 1px solid var(--brown);
+        margin: 10px 10px 10px 10px;
+        border-radius: 12px;
+        box-shadow: none;
+        transition: all 0.4s ease-out;
+        position: relative;
         }
 
-        nav a:hover::after, nav a.active::after { width: 100%; }
-        nav a:hover, nav a.active { color: var(--pink-pastel); }
+    
 
-        section {
-            padding: 40px;
-            background: rgb(249, 223, 242);
-            border-bottom: 1px solid var(--pink-pastel);
-            margin-bottom: 30px;
-            transition: all 0.4s ease-out;
+    section a {
+        color: var(--brown-accent);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        }
+    section a::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--brown);
+        transition: width 0.3s ease;
+        }
+    section a:hover::before {
+        width: 100%;
+        }
+    section a:hover {
+        opacity: 1;
         }
 
-        section:hover {
-            background: linear-gradient(135deg, white 0%, rgba(217, 165, 192, 0.03) 100%);
-            transform: translateY(-2px);
+    footer {
+        padding: 40px 0;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-size: 0.9rem;
+        color: var(--text);
+        border-top: 1px solid var(--brown-accent);
+        margin-top: 40px;
         }
+    #contact {
+        background:#f8ede5;
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(111, 78, 55, 0.08);
+        }   
+    #community-engagement {
+        background:#b2e0f6;
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(111, 78, 55, 0.08);
+                }
+    #guestbook {
+        background:#b6d6fc;
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(111, 78, 55, 0.08);
+                }
+    #guestbook-form input, #guestbook-form textarea {
+        border: 1px solid var(--brown-accent);
+        border-radius: 6px;
+        font-family: 'Lora', serif;
+        font-size: 1rem;
+        padding: 8px;
+        margin-bottom: 8px;
+                }
+    #guestbook-form button {
+        border-radius: 6px;
+        font-family: 'Lora', serif;
+        font-size: 1rem;
+        cursor: pointer;
+        background: var(--brown-accent);
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+                }
+    #guestbook-messages div {
+        background: #d7c4a3;
+        border-left: 4px solid var(--brown-accent);
+        border-radius: 6px;
+        margin-bottom: 12px;
+        padding: 12px 16px;
+        font-size: 1.05rem;
+        position: relative;
+                }
+    #guestbook-messages div::before {
+        content: "★";
+        position: fixed;
+        left: -32px;
+        top: 12px;
+        font-size: 1.2rem;
+                }    
+                /* Timeline Styles */
+    #timeline {
+        background:#b2e0f6;
+        border-radius: 12px;
+        padding: 32px;                    
+        margin-bottom: 40px;
+        box-shadow: 0 3px 8px #c7c7fbf4;
+                }
+    #timeline ul {
+        border-left: 3px solid var(--brown-accent);
+        padding-left: 24px;
+        margin-top: 16px;
+        line-height: 20px;
+        letter-spacing: normal;
+                }              
+    #timeline li {
+        position: relative;
+        margin-bottom: 16px;
+        font-size: 1.05rem;
+        word-spacing: normal;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        line-height: normal;
+                }                
+    #timeline li::before {    
+        content: "";
+        position: fixed;
+        left: -32px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        background:;
+        border-radius:;
+        box-shadow:;
+                }
+    #timeline li strong {
+        color: #4a2e1c;
+        font-size: 1.1rem;
+                }
+    #timeline li:hover {
+        background: rgba(63, 8, 33, 0.07);
+        border-radius: 6px;
+        transition: background 0.2s;
+                }
 
-        section:last-of-type {
-            border-bottom: none;
-        }
+    .side-by-side {
+        display: flex;
+        gap: 30px;
+                }
 
-        h2 {
-            font-family: 'Lora', serif;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 18px;
-            font-size: 1.5rem;
-        }
-
-        h3 {
-            font-family: 'Lora', serif;
-            font-weight: 600;
-            color: var(--text);
-            margin-top: 24px;
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-        }
-
-        section a {
-            color: var(--pink-pastel);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        section a:hover { text-decoration: underline; }
-
-        ul {
-            padding-left: 1.5em;
-            margin-top: 12px;
-        }
-
-        li {
-            margin-bottom: 12px;
-        }
-
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text);
-            border-top: 1px solid var(--pink-pastel);
-            margin-top: 40px;
-        }
+    .side-by-side section {
+        flex: 1;
+                }
 
         @media (max-width: 600px) {
-            section { padding: 24px; }
-            nav a { display: block; margin: 10px 0; }
+            body {
+                padding: 0 16px 0 0;
+            }
+            
+            header {
+                padding: 24px 0 0 0;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-content {
+                order: 2;
+            }
+            
+            .profile-image {
+                order: 1;
+                width: 180px;
+                height: 240px;
+                margin: 0 auto 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+                        
+            section {
+                padding: 24px 20px;
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            #guestbook, #timeline {
+                padding: 24px 20px;
+            }
+            
+            #timeline li {
+                font-size: 0.95rem;
+            }
+            
+            blockquote {
+                padding: 14px 16px !important;
+                font-size: 1rem !important;
+            }
+            
+            .service-list li {
+                font-size: 0.95rem;
+                padding: 12px 0;
+            }
+            
+            footer {
+                padding: 24px 0;
+                font-size: 0.85rem;
+            }
         }
-    </style>
+            @media (max-width: 800px) {
+                .side-by-side {
+                    flex-direction: column;
+                }
+             }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+</style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header role="banner">
-        <h1>Resources & Recommendations</h1>
+    <header>
+        <h1>Roxy Alexander</h1>
+        <h2 class="subtitle">Resources</h2>
         <nav role="navigation" aria-label="Site navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="writing.html">Writing</a>
-            <a href="resources.html" class="active">Resources</a>
-            <a href="podcast.html">Podcast</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="about.html" style="font-size: 15px;">About</a>
+            <a href="research.html" style="font-size: 15px;">Research</a>
+            <a href="writing.html" style="font-size: 15px;">Writing</a>
+            <a href="resources.html" style="font-size: 15px;">Resources</a>
+            <a href="podcast.html" style="font-size: 15px;">Podcast</a>
+            <a href="index.html#contact" style="font-size: 15px;">Contact</a>
         </nav>
+        <hr>
     </header>
 
     <main id="main-content" role="main">
@@ -206,17 +438,13 @@
                 <li><strong>The Disability Bioethics Reader</strong> edited by Joel Michael Reynolds and Christine Wieseler</li>
 
             </ul>
-        </section>
-
-        <section>
+       <br>
             <h2>Podcasts</h2>
             <ul>
                 <li><strong>Disability After Dark</strong></li>
                 <li><strong>Philosophy Bites</strong></li>
             </ul>
-        </section>
-
-        <section>
+      <br>
             <h2>Definitions & Quotes</h2>
             <p><a href="definitions-and-quotes.html">View key definitions and quotes</a> related to disability justice, epistemic injustice, ableism, and more.</p>
         </section>
