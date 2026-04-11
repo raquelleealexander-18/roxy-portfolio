@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spectacle and the Chameleon Nature of Ableism | Roxy Alexander</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap" rel="stylesheet">
+import os
+import glob
+import re
 
+new_style = """
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { 
@@ -113,33 +105,17 @@
             article h2 { font-size: 1.4rem; }
         }
     </style>
-</head>
-<body>
+"""
 
-    <header class="article-header wrap">
-        <a href="../writing.html" class="back-nav">← Back to Writing</a>
-        <h1>Living Inbetween Normal and Different</h1>
-        <p class="date">February 19, 2026</p>
-        <br>
-         <p class="date">By Roxy Alexander</p>
-
-    </header>
-
-    <main class="wrap">
-        <article>
-            <p> It was about five years ago when I first read the work of Argentine Feminist Philosopher, Maria Lugones. I am particularly found of her piece <i>"Playfullness, "World"-Travelling, and Loving Perception,"</i> curious as to how disability scholarship could use Lugones' scholarship to rethink the act of <i>masking</i> not as a loss of identiity, but as a "world"-travelling.</p>
-            <blockquote>"[T]he outsider has necessarily acquired flexibility in shifting from the mainstream construction of life where she is constructed as an outsider to other constructions of life where she is more or less 'at home'" (Lugones 1987, 15).</blockquote>  
-            <p> Maria Lugones speaks directly to an experience of navigating racialized social worlds. The nature of her definition of "world"-travelling allows for its application in understadning identity beyond a racial category. In fact, it is at these intersections of gender, race, class, sexuality, and disability that "world"-travelling becomes ordinary. Black queer disabled women will expereince the shift between mainstream constructions of race (White), gender (Male), sexuality (heterosexual), and ability (normate) far more frequently than a Black stragiht and normate woman will.</p>
-            <p> To be sure, the experience of Black straight, normate women cannot be de-centered in the discussion of "world"-travelling. However, it is prudent that we examine queerness, both sexually and bodily, centering the lived experience of those shifting between worlds that feel like home, and the normate mainstream world. </P>
-
-        </article>
-     <a href="../writing.html" class="back-nav">← Back to Writing</a>
-
-    </main>
-
-    <footer>
-        ROXY ALEXANDER • DISABILITY SCHOLAR & ACTIVIST
-    </footer>
-
-</body>
-</html>
+# Process all .html files in the blogs directory
+for filepath in glob.glob("/Users/roxy/Documents/GitHub/roxy-portfolio/blogs/*.html"):
+    with open(filepath, 'r') as f:
+        content = f.read()
+    
+    # Replace style tags
+    new_content = re.sub(r'<style>.*?</style>', new_style.strip(), content, flags=re.DOTALL)
+    
+    with open(filepath, 'w') as f:
+        f.write(new_content)
+        
+print("Updated styles for all blog html files!")
