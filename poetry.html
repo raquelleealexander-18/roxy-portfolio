@@ -418,12 +418,13 @@
 <body>
     <header>
         <h1>Roxy Alexander</h1>
-        <h2 class="subtitle">Writing</h2>
+        <h2 class="subtitle">Poetry</h2>
         <nav role="navigation" aria-label="Site navigation">
             <a href="index.html">Home</a>
             <a href="about.html" style="font-size: 15px;">About</a>
             <a href="research.html" style="font-size: 15px;">Research</a>
             <a href="writing.html" style="font-size: 15px;">Writing</a>
+            <a href="poetry.html" style="font-size: 15px;">Poetry</a>
             <a href="resources.html" style="font-size: 15px;">Resources</a>
             <a href="podcast.html" style="font-size: 15px;">Podcast</a>
             <a href="index.html#contact" style="font-size: 15px;">Contact</a>
@@ -434,57 +435,13 @@
     <main id="main-content" role="main">
         <div class="sections-container">
         <section>
-            <h2>Blog Posts</h2>
-            <p style ="font-style: italic; margin-bottom: 20px;">Personal essays, reflections, and shorter pieces.</p>
-            <div id="blog-posts"></div>
-            <article>
-                <div class="post-date">June 6th, 2022</div>
-                <h3 class="post-title">
-                    <a href="https://omstars.com/blog/culture/i-choose-self-love-how-yoga-taught-me-to-accept-my-autism-diagnosis/">I Choose Self-Love: How Yoga Taught Me to Accept My Autism Diagnosis</a>
-                </h3>
-            </article>
-        </section>
-
-        <section>
-            <h2>Papers</h2>
-            <p style="font-style: italic; margin-bottom: 20px;">Academic publications and works in progress.</p>
-            <article>
-                <div class="post-date">December 2025</div>
-                <h3 class="post-title">
-                    <a href="blogs/pharmaceuticals-technology-machines-and-humans.html">Pharmaceuticals: Technology, Machines, and Humans</a>
-                </h3>
-                <p>My work calls for a shift in thinking: from curing individuals we deem abnormal to transforming environments and social systems, reframing healthcare policy and pharmaceutical advertising through a pharmableist critique.</p>
-            </article>
-            <article>
-                <div class="post-date">December 2024</div>
-                <h3 class="post-title">
-                    <a href="unmasking-pharmableism.html">Unmasking Pharmableism</a>
-                </h3>
-                <p>Introducing <em>pharmableism</em> — an ideology that reinforces pharmaceutical intervention as a solution to disability — and examining its reproduction within the U.S. education system through speculative fiction analysis of Percy Jackson.</p>
-            </article>
-            <article>
-                <div class="post-date">May 2023</div>
-                <h3 class="post-title">
-                    <a href="epistemic-injustice-adhd-girls.html"> Epistemic Injustice and ADHD Girls in the K-12 Education System</a>
-                </h3>
-                <p><i>Undergraduate Honors Thesis.</i> Examining the ways in which ADHD girls experience epistemic injustice within the K-12 education system.</p>
-            </article>
-            <article>
-                <div class="post-date">October 2022</div>
-                <h3 class="post-title">
-                    <a href="blogs/2022_CSWS_Annual_Rvw.pdf">Statement on Overturning Roe v. Wade</a>
-                </h3>
-                <p> I provide commentary as one of many contributors in an article on the implications of overturning Roe v. Wade. This article was published in the 2022 Center for the Study of Women in Society Annual Review. <i>See page 4 of the journal for my statement.</i></p>
-            </article>
-        </section>
-        <section>
-            <h2>Poetry</h2>
-            <p style="font-style: italic; margin-bottom: 20px;">A collection of my poems.</p>
-            <article>
-                <h3 class="post-title">
-                    <a href="poetry.html">Read My Poetry</a>
-                </h3>
-            </article>
+            <h2>My Poetry</h2>
+            <p style ="font-style: italic; margin-bottom: 20px;">A collection of my poems.</p>
+            <div id="poetry-posts">
+                <article>
+                    <h3 class="post-title">Coming soon...</h3>
+                </article>
+            </div>
         </section>
         </div>
     </main>
@@ -492,22 +449,5 @@
     <footer role="contentinfo">
         <p>&copy; 2026 Roxy Alexander. All rights reserved.</p>
     </footer>
-
-    <script src="posts.js"></script>
-    <script>
-        const postContainer = document.getElementById('blog-posts');
-        blogPosts.forEach(post => {
-            const article = document.createElement('article');
-            article.setAttribute('role', 'article');
-            article.innerHTML = `
-                <div class="post-date">${post.date}</div>
-                <h3 class="post-title">
-                    <a href="${post.link}">${post.title}</a>
-                </h3>
-                <p>${post.excerpt}</p>
-            `;
-            postContainer.appendChild(article);
-        });
-    </script>
 </body>
 </html>
